@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourism - Visit San Meridian</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --sm-primary: #0A3161;
+            --sm-secondary: #B12B28;
+            --sm-accent: #F4A261;
+            --sm-bg: #F8F9FA;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: var(--sm-bg);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            background-color: var(--sm-primary);
+            border-bottom: 4px solid var(--sm-secondary);
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            color: white !important;
+            letter-spacing: 1px;
+        }
+
+        .nav-link {
+            color: rgba(255, 255, 255, 0.9) !important;
+            font-weight: 500;
+        }
+
+        .nav-link:hover {
+            color: var(--sm-accent) !important;
+        }
+
+        .tourism-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url('https://placehold.co/1920x800/10b981/0f172a?text=Lush+Rainforests+&+Beaches') no-repeat center center;
+            background-size: cover;
+            color: white;
+            padding: 120px 0;
+            text-align: center;
+        }
+
+        main {
+            flex-grow: 1;
+        }
+
+        footer {
+            background-color: #212529;
+            color: #adb5bd;
+            padding: 3rem 0;
+            margin-top: auto;
+        }
+
+        footer a {
+            color: #adb5bd;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .official-banner {
+            background-color: #e9ecef;
+            padding: 0.5rem 0;
+            font-size: 0.85rem;
+            color: #495057;
+        }
+
+        .destination-card {
+            border: none;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .destination-card:hover {
+            transform: translateY(-8px);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Official Government Banner -->
+    <div class="official-banner text-center border-bottom">
+        <div class="container"><i class="fas fa-landmark text-primary me-2"></i> An official website of the Government
+            of San Meridian</div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="country_flag.png" alt="San Meridian Flag" style="height: 32px; width: 48px; object-fit: cover; border-radius: 4px;" class="me-2 shadow-sm border border-light">
+                <span class="d-none d-sm-inline">Government of San Meridian</span>
+                <span class="d-sm-none">San Meridian Gov</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="taxes.html">Taxes & Finance</a></li>
+                    <li class="nav-item"><a class="nav-link" href="support.html">Local Support</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="economyDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Economy</a>
+                        <ul class="dropdown-menu" aria-labelledby="economyDropdown">
+                            <li><a class="dropdown-item" href="economy.html">Economic Structure</a></li>
+                            <li><a class="dropdown-item" href="spending-2025.html">2025 Govt Spending</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="press.html">Press Room</a></li>
+                    <li class="nav-item"><a class="nav-link active fw-bold border-bottom border-warning"
+                            href="tourism.html">Tourism</a></li>
+                    <li class="nav-item"><a class="nav-link fw-bold text-warning" href="police/index.html">Police</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Tourism Hero -->
+        <header class="tourism-hero">
+            <div class="container">
+                <h1 class="display-3 fw-bold mb-3 text-warning">Discover San Meridian</h1>
+                <p class="lead mb-5 fs-3" style="font-weight: 300;">Where pristine beaches meet untamed highlands.</p>
+                <div class="d-flex justify-content-center gap-3 flex-wrap">
+                    <a href="#destinations" class="btn btn-warning btn-lg px-4 rounded-pill fw-bold">Explore
+                        Destinations</a>
+                    <a href="#visa" class="btn btn-outline-light btn-lg px-4 rounded-pill">Visa Information</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Highlights Section -->
+        <section class="py-5 bg-white" id="destinations">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold text-primary">Top Destinations</h2>
+                    <p class="text-muted">Experience the vibrant culture and breathtaking landscapes of our beloved
+                        nation.</p>
+                    <hr style="width: 50px; margin: 1rem auto; border-color: var(--sm-accent); border-width: 3px;">
+                </div>
+
+                <div class="row g-4">
+                    <!-- Dest 1 -->
+                    <div class="col-md-4">
+                        <div class="card destination-card shadow-sm h-100">
+                            <img src="https://placehold.co/600x400/0ea5e9/ffffff?text=Coral+Coast" class="card-img-top"
+                                alt="Coral Coast">
+                            <div class="card-body p-4">
+                                <h4 class="card-title fw-bold">The Sapphire Riviera</h4>
+                                <p class="card-text text-muted">A 200-mile stretch of pristine white sand beaches and
+                                    crystal-clear waters on the western coast. Perfect for diving and luxury resorts.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Dest 2 -->
+                    <div class="col-md-4">
+                        <div class="card destination-card shadow-sm h-100">
+                            <img src="https://placehold.co/600x400/1e293b/ffffff?text=Capital+City" class="card-img-top"
+                                alt="Capital Architecture">
+                            <div class="card-body p-4">
+                                <h4 class="card-title fw-bold">Ciudad Central</h4>
+                                <p class="card-text text-muted">The bustling heart of San Meridian. Explore colonial-era
+                                    architecture fused with modern skyscrapers, vibrant markets, and world-class
+                                    museums.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Dest 3 -->
+                    <div class="col-md-4">
+                        <div class="card destination-card shadow-sm h-100">
+                            <img src="https://placehold.co/600x400/166534/ffffff?text=Emerald+Highlands"
+                                class="card-img-top" alt="Highlands">
+                            <div class="card-body p-4">
+                                <h4 class="card-title fw-bold">The Emerald Cordillera</h4>
+                                <p class="card-text text-muted">Escape into the cool, misty mountains of the interior.
+                                    Discover ancient ruins, coffee plantations, and rare wildlife in our national parks.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Visa Info -->
+        <section class="py-5 bg-light border-top" id="visa">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <h2 class="fw-bold mb-4 text-primary">Travel Planning & Visas</h2>
+                        <p class="mb-4">San Meridian welcomes tourists from across the globe. Citizens of over 80
+                            countries enjoy visa-free travel for up to 90 days.</p>
+
+                        <div class="accordion" id="visaAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne">
+                                        Do I need a Visa?
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    data-bs-parent="#visaAccordion">
+                                    <div class="accordion-body text-muted small">
+                                        Check our digital portal to see if your passport qualifies for visa-free entry.
+                                        E-Visas are available for all other nationalities and are typically processed in
+                                        48 hours.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed fw-bold" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                        Currency & Travel Advisories
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse"
+                                    data-bs-parent="#visaAccordion">
+                                    <div class="accordion-body text-muted small">
+                                        The official currency is the Meridian Peso (SM$). Credit cards are widely
+                                        accepted in urban areas. Check our latest health and safety advisories before
+                                        traveling.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary mt-4">Apply for E-Visa System Portal <i
+                                class="fas fa-external-link-alt ms-2"></i></button>
+                    </div>
+                    <div class="col-lg-5 offset-lg-1">
+                        <img src="https://placehold.co/600x600/f8fafc/94a3b8?text=Passport+Stamps" alt="Passport"
+                            class="img-fluid rounded shadow-sm border border-4 border-white">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="text-white mb-3 d-flex align-items-center"><img src="country_flag.png" alt="San Meridian Flag" style="height: 24px; width: 36px; object-fit: cover; border-radius: 3px;" class="me-2">
+                        Republic of San Meridian</h5>
+                    <p class="small">Dedicated to the prosperity, safety, and well-being of all citizens. Progress
+                        through unity and strength.</p>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="text-white mb-3 text-uppercase font-monospace">Quick Links</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="index.html">Home</a></li>
+                        <li class="mb-2"><a href="taxes.html">Taxes</a></li>
+                        <li class="mb-2"><a href="support.html">Local Support</a></li>
+                        <li class="mb-2"><a href="tourism.html">Tourism</a></li>
+                    </ul>
+                </div>
+                <!-- ... existing footer ... -->
+                <div class="col-lg-4 col-md-6">
+                    <h6 class="text-white mb-3 text-uppercase font-monospace">Contact Us</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> 1 Palacio Nacional, Capital District
+                        </li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i> +599 (0) 123-4567</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> info@gov.sm</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="mt-4 mb-4 border-secondary">
+            <div class="text-center small">&copy; 2025 Government of San Meridian. All rights reserved.</div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanted Profile: Maria Rojas - Policia Nacional</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --police-primary: #0f172a;
+            --police-secondary: #dc2626;
+            --police-accent: #fbbf24;
+            --police-bg: #f8fafc;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: var(--police-bg);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .navbar-police {
+            background-color: var(--police-primary);
+            border-bottom: 5px solid var(--police-accent);
+        }
+
+        .navbar-police .navbar-brand {
+            font-weight: 800;
+            color: var(--police-accent) !important;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .navbar-police .nav-link {
+            color: white !important;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        .navbar-police .nav-link:hover {
+            color: var(--police-accent) !important;
+        }
+
+        .profile-header {
+            background-color: #1e293b;
+            color: white;
+            padding: 40px 0;
+            border-bottom: 5px solid var(--police-secondary);
+        }
+
+        .data-label {
+            font-weight: 800;
+            text-transform: uppercase;
+            color: #475569;
+            font-size: 0.8rem;
+            margin-bottom: 0px;
+        }
+
+        .data-value {
+            font-weight: 600;
+            color: #0f172a;
+            font-size: 1.1rem;
+            border-bottom: 1px dotted #cbd5e1;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-police sticky-top py-3">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html"><i
+                    class="fas fa-star border border-2 rounded-circle p-2 me-2 border-warning text-warning"></i>Policia
+                Nacional</a>
+            <div class="ms-auto"><a href="most-wanted.html" class="btn btn-outline-light btn-sm fw-bold"><i
+                        class="fas fa-arrow-left me-2"></i>Back to List</a></div>
+        </div>
+    </nav>
+    <main>
+        <header class="profile-header">
+            <div class="container">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div>
+                        <h1 class="display-3 fw-black text-uppercase tracking-widest text-white mb-0"
+                            style="font-weight: 900;">MARIA ROJAS</h1>
+                        <p class="fs-4 text-warning mb-0">Record #PN-2025-0103</p>
+                    </div>
+                    <div class="bg-danger text-white p-3 rounded text-center border border-2 border-white ms-3">
+                        <div class="small text-uppercase fw-bold mb-1">Reward Up To</div>
+                        <div class="fs-3 fw-bold">SMS$ 25,000</div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <img src="https://placehold.co/600x600/94a3b8/0f172a?text=Rojas+Mugshot" alt="Maria Rojas"
+                            class="img-fluid border border-dark border-4 shadow-sm w-100">
+                        <a href="#" class="btn btn-danger w-100 mt-3 fw-bold text-uppercase py-3"><i
+                                class="fas fa-bullhorn me-2"></i> Submit Tip</a>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card border-top border-4 border-danger shadow-sm rounded-0">
+                            <div class="card-header bg-white border-bottom">
+                                <h4 class="fw-bold mb-0 text-uppercase"><i class="fas fa-id-card text-muted me-2"></i>
+                                    Subject Details</h4>
+                            </div>
+                            <div class="card-body p-4">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <p class="data-label">Full Name</p>
+                                        <p class="data-value">Maria Elena Rojas</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p class="data-label">Date of Birth</p>
+                                        <p class="data-value">05/22/1990</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p class="data-label">Height</p>
+                                        <p class="data-value">1.65 m (5'5")</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p class="data-label">Weight</p>
+                                        <p class="data-value">60 kg (132 lbs)</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p class="data-label">Hair Code</p>
+                                        <p class="data-value">Dark Brown</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p class="data-label">Eye Color</p>
+                                        <p class="data-value">Green</p>
+                                    </div>
+                                </div>
+                                <h5 class="fw-bold mt-4 mb-3 border-bottom pb-2">Scars & Marks</h5>
+                                <p class="text-muted">None known. Frequently wears business-professional attire and
+                                    oversized sunglasses.</p>
+
+                                <h5 class="fw-bold mt-4 mb-3 border-bottom pb-2 text-danger">Alleged Crimes</h5>
+                                <ul class="list-group list-group-flush border">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Embezzlement of State Funds<span class="badge bg-danger rounded-pill">Warrant
+                                            Active</span></li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Falsifying Government Documents<span
+                                            class="badge bg-danger rounded-pill">Warrant Active</span></li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">Wire
+                                        Fraud<span class="badge bg-danger rounded-pill">Warrant Active</span></li>
+                                </ul>
+
+                                <h5 class="fw-bold mt-4 mb-3 border-bottom pb-2">Remarks</h5>
+                                <p class="text-muted">Formerly a mid-level manager in the Department of National
+                                    Revenue, Rojas is accused of siphoning over SMS$ 2.4 million in misdirected tax
+                                    funds to offshore accounts. She fled the capital shortly before a scheduled audit.
+                                    Known to have contacts in neighboring coastal countries. Considered an extreme
+                                    flight risk.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-dark text-white py-4 mt-auto border-top border-secondary border-2 text-center small">
+        <div class="container">&copy; 2025 Policia Nacional de San Meridian.</div>
+    </footer>
+</body>
+
+</html>

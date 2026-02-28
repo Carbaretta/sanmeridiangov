@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divisions - Policia Nacional</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --police-primary: #0f172a;
+            --police-secondary: #dc2626;
+            --police-accent: #fbbf24;
+            --police-bg: #f8fafc;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: var(--police-bg);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .navbar-police {
+            background-color: var(--police-primary);
+            border-bottom: 5px solid var(--police-accent);
+        }
+
+        .navbar-police .navbar-brand {
+            font-weight: 800;
+            color: var(--police-accent) !important;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .navbar-police .nav-link {
+            color: white !important;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        .navbar-police .nav-link:hover {
+            color: var(--police-accent) !important;
+        }
+
+        .page-header {
+            background-color: #1e293b;
+            color: white;
+            padding: 60px 0;
+            border-bottom: 5px solid var(--police-secondary);
+            text-align: center;
+        }
+
+        .division-card {
+            border-left: 5px solid var(--police-primary);
+            transition: transform 0.2s;
+        }
+
+        .division-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-left-color: var(--police-secondary);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-police sticky-top py-3">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="../country_flag.png" alt="San Meridian Flag"
+                    style="height: 32px; width: 48px; object-fit: cover; border-radius: 4px;"
+                    class="me-2 shadow-sm border border-secondary">Policia Nacional
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#policeNav">
+                <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="policeNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="most-wanted.html">Most Wanted</a></li>
+                    <li class="nav-item"><a class="nav-link" href="report.html">Report a Crime</a></li>
+                    <li class="nav-item"><a class="nav-link text-warning" href="divisions.html">Divisions</a></li>
+                    <li class="nav-item"><a class="nav-link text-danger" href="careers.html">Careers</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <header class="page-header">
+            <div class="container">
+                <h1 class="display-4 fw-black text-uppercase tracking-widest text-white mb-2" style="font-weight: 900;">
+                    Specialized Divisions</h1>
+                <p class="lead mb-0 text-white-50">Targeted task forces designed to dismantle specific criminal
+                    elements.</p>
+            </div>
+        </header>
+
+        <section class="py-5">
+            <div class="container">
+                <div class="row align-items-center mb-5">
+                    <div class="col-lg-7">
+                        <h3 class="fw-bold mb-3 text-dark">A Multi-Faceted Approach to Justice</h3>
+                        <p class="text-muted fs-5">San Meridian faces complex, evolving threats. To combat these
+                            effectively, the Policia Nacional operates specialized divisions, each composed of highly
+                            trained officers focused on specific categories of crime affecting our citizenry and state.
+                        </p>
+                    </div>
+                    <div class="col-lg-5 text-center">
+                        <img src="../san_meridian_police.png" class="img-fluid"
+                            style="max-height: 300px; object-fit: contain;" alt="San Meridian Police Logo">
+                    </div>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Homicide & Assault -->
+                    <div class="col-md-6">
+                        <div class="card division-card h-100 bg-white border-0 shadow-sm border-bottom">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="bg-danger text-white rounded-circle p-3 me-3 d-flex align-items-center justify-content-center"
+                                        style="width: 60px; height: 60px;">
+                                        <i class="fas fa-skull-crossbones fs-4"></i>
+                                    </div>
+                                    <h4 class="fw-bold mb-0 text-dark">Major Crimes Task Force</h4>
+                                </div>
+                                <h6 class="text-muted fw-bold mb-3 text-uppercase small border-bottom pb-2">Homicide,
+                                    Assault and Violent Crimes</h6>
+                                <p class="text-muted">The vanguard of the Policia Nacional. This division investigates
+                                    all murders, attempted murders, kidnappings, and severe aggravated assaults
+                                    occurring within national borders. They respond to active gang violence and
+                                    cartel-related executions.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Drugs -->
+                    <div class="col-md-6">
+                        <div class="card division-card h-100 bg-white border-0 shadow-sm border-bottom"
+                            style="border-left-color: #10b981;">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="text-white rounded-circle p-3 me-3 d-flex align-items-center justify-content-center"
+                                        style="width: 60px; height: 60px; background-color: #10b981;">
+                                        <i class="fas fa-capsules fs-4"></i>
+                                    </div>
+                                    <h4 class="fw-bold mb-0 text-dark">Anti-Narcotics Bureau</h4>
+                                </div>
+                                <h6 class="text-muted fw-bold mb-3 text-uppercase small border-bottom pb-2">Drug and
+                                    Narcotics Trafficking</h6>
+                                <p class="text-muted">Tasked with eradicating the production, distribution, and
+                                    trafficking of illegal substances. This unit heavily patrols the Emerald Cordillera
+                                    supply routes and coordinates with port authorities in the Sapphire Riviera to seize
+                                    maritime shipments.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Corruption -->
+                    <div class="col-md-6">
+                        <div class="card division-card h-100 bg-white border-0 shadow-sm border-bottom"
+                            style="border-left-color: #3b82f6;">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="text-white rounded-circle p-3 me-3 d-flex align-items-center justify-content-center"
+                                        style="width: 60px; height: 60px; background-color: #3b82f6;">
+                                        <i class="fas fa-balance-scale fs-4"></i>
+                                    </div>
+                                    <h4 class="fw-bold mb-0 text-dark">Internal Affairs & State Integrity</h4>
+                                </div>
+                                <h6 class="text-muted fw-bold mb-3 text-uppercase small border-bottom pb-2">Tackling
+                                    Government Corruption</h6>
+                                <p class="text-muted">An independent body operating under Chief Law's direct command.
+                                    This division roots out bribery, extortion, and cartel-collusion within the police
+                                    force itself, as well as investigating corrupt politicians and civil servants within
+                                    the broader San Meridian government.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Financial Fraud -->
+                    <div class="col-md-6">
+                        <div class="card division-card h-100 bg-white border-0 shadow-sm border-bottom"
+                            style="border-left-color: #8b5cf6;">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="text-white rounded-circle p-3 me-3 d-flex align-items-center justify-content-center"
+                                        style="width: 60px; height: 60px; background-color: #8b5cf6;">
+                                        <i class="fas fa-file-invoice-dollar fs-4"></i>
+                                    </div>
+                                    <h4 class="fw-bold mb-0 text-dark">Economic Crimes Unit</h4>
+                                </div>
+                                <h6 class="text-muted fw-bold mb-3 text-uppercase small border-bottom pb-2">Financial
+                                    Fraud & Embezzlement</h6>
+                                <p class="text-muted">Focused on white-collar crime, this unit tracks illicit money
+                                    flows, offshore evasion, corporate fraud, and large-scale embezzlement of national
+                                    tax funds. They work closely with the Department of National Revenue.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Women and Girls -->
+                    <div class="col-md-6">
+                        <div class="card division-card h-100 bg-white border-0 shadow-sm border-bottom"
+                            style="border-left-color: #ec4899;">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="text-white rounded-circle p-3 me-3 d-flex align-items-center justify-content-center"
+                                        style="width: 60px; height: 60px; background-color: #ec4899;">
+                                        <i class="fas fa-female fs-4"></i>
+                                    </div>
+                                    <h4 class="fw-bold mb-0 text-dark">Special Victims Unit</h4>
+                                </div>
+                                <h6 class="text-muted fw-bold mb-3 text-uppercase small border-bottom pb-2">Violence
+                                    Against Women and Girls</h6>
+                                <p class="text-muted">A dedicated unit responding to domestic abuse, sexual assault, and
+                                    human trafficking. This division employs specialized victim-advocates to ensure the
+                                    safety and psychological well-being of survivors throughout the judicial process.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Online Exploitation -->
+                    <div class="col-md-6">
+                        <div class="card division-card h-100 bg-white border-0 shadow-sm border-bottom"
+                            style="border-left-color: #f97316;">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="text-white rounded-circle p-3 me-3 d-flex align-items-center justify-content-center"
+                                        style="width: 60px; height: 60px; background-color: #f97316;">
+                                        <i class="fas fa-laptop-house fs-4"></i>
+                                    </div>
+                                    <h4 class="fw-bold mb-0 text-dark">Cyber Crimes Command</h4>
+                                </div>
+                                <h6 class="text-muted fw-bold mb-3 text-uppercase small border-bottom pb-2">Targeted
+                                    Online Exploitation</h6>
+                                <p class="text-muted">As San Meridian digitizes, so do its criminals. This division
+                                    tackles online extortion, dark web illicit markets, cyber-stalking, and the creation
+                                    or distribution of exploitative materials targeting minors or vulnerable citizens.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white pt-5 pb-3 mt-auto border-top border-secondary border-2 text-center small">
+        <div class="container">&copy; 2025 Policia Nacional de San Meridian.</div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

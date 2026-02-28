@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Support - Government of San Meridian</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --sm-primary: #0A3161;
+            --sm-secondary: #B12B28;
+            --sm-accent: #F4A261;
+            --sm-bg: #F8F9FA;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: var(--sm-bg);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            background-color: var(--sm-primary);
+            border-bottom: 4px solid var(--sm-secondary);
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            color: white !important;
+            letter-spacing: 1px;
+        }
+
+        .nav-link {
+            color: rgba(255, 255, 255, 0.9) !important;
+            font-weight: 500;
+        }
+
+        .nav-link:hover {
+            color: var(--sm-accent) !important;
+        }
+
+        .page-header {
+            background-color: #2b7042;
+            color: white;
+            padding: 60px 0;
+            border-bottom: 5px solid #1c4a2a;
+        }
+
+        main {
+            flex-grow: 1;
+        }
+
+        footer {
+            background-color: #212529;
+            color: #adb5bd;
+            padding: 3rem 0;
+            margin-top: auto;
+        }
+
+        footer a {
+            color: #adb5bd;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .official-banner {
+            background-color: #e9ecef;
+            padding: 0.5rem 0;
+            font-size: 0.85rem;
+            color: #495057;
+        }
+
+        .support-card {
+            border-left: 4px solid #2b7042;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Official Government Banner -->
+    <div class="official-banner text-center border-bottom">
+        <div class="container"><i class="fas fa-landmark text-primary me-2"></i> An official website of the Government
+            of San Meridian</div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="country_flag.png" alt="San Meridian Flag" style="height: 32px; width: 48px; object-fit: cover; border-radius: 4px;" class="me-2 shadow-sm border border-light">
+                <span class="d-none d-sm-inline">Government of San Meridian</span>
+                <span class="d-sm-none">San Meridian Gov</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="taxes.html">Taxes & Finance</a></li>
+                    <li class="nav-item"><a class="nav-link active fw-bold border-bottom border-warning"
+                            href="support.html">Local Support</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="economyDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Economy</a>
+                        <ul class="dropdown-menu" aria-labelledby="economyDropdown">
+                            <li><a class="dropdown-item" href="economy.html">Economic Structure</a></li>
+                            <li><a class="dropdown-item" href="spending-2025.html">2025 Govt Spending</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="press.html">Press Room</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tourism.html">Tourism</a></li>
+                    <li class="nav-item"><a class="nav-link fw-bold text-warning" href="police/index.html">Police</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Page Header -->
+        <header class="page-header text-center">
+            <div class="container">
+                <h1 class="display-5 fw-bold mb-2">Social Services & Local Support</h1>
+                <p class="lead mb-0">Empowering families and communities across the nation.</p>
+            </div>
+        </header>
+
+        <section class="py-5">
+            <div class="container">
+                <div class="row text-center mb-5">
+                    <div class="col-8 mx-auto">
+                        <h2 class="fw-bold">How can we help you today?</h2>
+                        <p class="text-muted">The Ministry of Social Welfare provides a safety net for those in need,
+                            ensuring healthcare access, housing stability, and rapid response during crises.</p>
+                        <hr style="width: 50px; margin: 2rem auto; border-color: #2b7042; border-width: 3px;">
+                    </div>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card support-card h-100 shadow-sm border-0 bg-white">
+                            <div class="card-body p-4">
+                                <div class="mb-3"><i class="fas fa-hospital-user fs-1" style="color: #2b7042;"></i>
+                                </div>
+                                <h4 class="fw-bold">Public Healthcare Access</h4>
+                                <p class="text-muted small">Information on national clinics, vaccination schedules, and
+                                    the Subsidized Medicine Program for low-income households.</p>
+                                <a href="#" class="text-decoration-none fw-bold" style="color: #2b7042;">Check
+                                    Eligibility <i class="fas fa-chevron-right ms-1 fs-6"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card support-card h-100 shadow-sm border-0 bg-white">
+                            <div class="card-body p-4">
+                                <div class="mb-3"><i class="fas fa-home fs-1" style="color: #2b7042;"></i></div>
+                                <h4 class="fw-bold">Housing Assistance</h4>
+                                <p class="text-muted small">Apply for rent relief, public housing allocations, and
+                                    interest-free loans for first-time homebuyers.</p>
+                                <a href="#" class="text-decoration-none fw-bold" style="color: #2b7042;">View Programs
+                                    <i class="fas fa-chevron-right ms-1 fs-6"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card support-card h-100 shadow-sm border-0 bg-white">
+                            <div class="card-body p-4">
+                                <div class="mb-3"><i class="fas fa-briefcase fs-1" style="color: #2b7042;"></i></div>
+                                <h4 class="fw-bold">Employment Subsidies</h4>
+                                <p class="text-muted small">Access the national job board, file for temporary
+                                    unemployment benefits, and find free retraining programs.</p>
+                                <a href="#" class="text-decoration-none fw-bold" style="color: #2b7042;">Find
+                                    Opportunities <i class="fas fa-chevron-right ms-1 fs-6"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-light p-4 rounded-3 border mt-5 text-center">
+                    <h4 class="fw-bold text-danger"><i class="fas fa-phone-alt me-2"></i> National Emergency Hotline:
+                        112</h4>
+                    <p class="mb-0 text-muted">Available 24/7 for immediate crises, severe health emergencies, and
+                        urgent protective services.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="text-white mb-3 d-flex align-items-center"><img src="country_flag.png" alt="San Meridian Flag" style="height: 24px; width: 36px; object-fit: cover; border-radius: 3px;" class="me-2">
+                        Republic of San Meridian</h5>
+                    <p class="small">Dedicated to the prosperity, safety, and well-being of all citizens. Progress
+                        through unity and strength.</p>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="text-white mb-3 text-uppercase font-monospace">Quick Links</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="index.html">Home</a></li>
+                        <li class="mb-2"><a href="taxes.html">Taxes</a></li>
+                        <li class="mb-2"><a href="support.html">Local Support</a></li>
+                        <li class="mb-2"><a href="tourism.html">Tourism</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="text-white mb-3 text-uppercase font-monospace">Transparency</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="press.html">Press Releases</a></li>
+                        <li class="mb-2"><a href="spending-2025.html">2025 Budget</a></li>
+                        <li class="mb-2"><a href="economy.html">Economy</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h6 class="text-white mb-3 text-uppercase font-monospace">Contact Us</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> 1 Palacio Nacional, Capital District
+                        </li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i> +599 (0) 123-4567</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> info@gov.sm</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="mt-4 mb-4 border-secondary">
+            <div class="text-center small">&copy; 2025 Government of San Meridian. All rights reserved.</div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

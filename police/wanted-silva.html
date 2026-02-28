@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanted Profile: Alejandro Silva - Policia Nacional</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --police-primary: #0f172a;
+            --police-secondary: #dc2626;
+            --police-accent: #fbbf24;
+            --police-bg: #f8fafc;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: var(--police-bg);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .navbar-police {
+            background-color: var(--police-primary);
+            border-bottom: 5px solid var(--police-accent);
+        }
+
+        .navbar-police .navbar-brand {
+            font-weight: 800;
+            color: var(--police-accent) !important;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .navbar-police .nav-link {
+            color: white !important;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        .navbar-police .nav-link:hover {
+            color: var(--police-accent) !important;
+        }
+
+        .profile-header {
+            background-color: #1e293b;
+            color: white;
+            padding: 40px 0;
+            border-bottom: 5px solid var(--police-secondary);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .data-label {
+            font-weight: 800;
+            text-transform: uppercase;
+            color: #475569;
+            font-size: 0.8rem;
+            margin-bottom: 0px;
+        }
+
+        .data-value {
+            font-weight: 600;
+            color: #0f172a;
+            font-size: 1.1rem;
+            border-bottom: 1px dotted #cbd5e1;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        .danger-banner {
+            background-color: var(--police-secondary);
+            color: white;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 5px;
+            padding: 10px;
+            font-size: 1.2rem;
+            margin-bottom: 0;
+            box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="danger-banner"><i class="fas fa-exclamation-triangle me-2"></i> High Priority Target <i
+            class="fas fa-exclamation-triangle ms-2"></i></div>
+    <nav class="navbar navbar-expand-lg navbar-police sticky-top py-3">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html"><i
+                    class="fas fa-star border border-2 rounded-circle p-2 me-2 border-warning text-warning"></i>Policia
+                Nacional</a>
+            <div class="ms-auto"><a href="most-wanted.html" class="btn btn-outline-light btn-sm fw-bold"><i
+                        class="fas fa-arrow-left me-2"></i>Back to List</a></div>
+        </div>
+    </nav>
+    <main>
+        <header class="profile-header">
+            <div class="container">
+                <div class="d-flex align-items-center justify-content-between position-relative z-1">
+                    <div>
+                        <h1 class="display-3 fw-black text-uppercase tracking-widest text-white mb-0"
+                            style="font-weight: 900; text-shadow: 2px 2px 0 #000;">ALEJANDRO SILVA</h1>
+                        <p class="fs-4 text-warning mb-0">Record #PN-2023-1102</p>
+                    </div>
+                    <div class="bg-dark text-white p-3 rounded text-center border border-2 border-danger ms-3">
+                        <div class="small text-uppercase fw-bold text-danger mb-1">Reward Up To</div>
+                        <div class="fs-3 fw-bold text-warning">SMS$ 150,000</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Background element -->
+            <div class="position-absolute fs-1 text-white opacity-10"
+                style="top: -20px; right: -20px; transform: rotate(-15deg); user-select: none;">
+                <i class="fas fa-fingerprint fa-10x"></i>
+            </div>
+        </header>
+
+        <section class="py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="position-relative">
+                            <span
+                                class="position-absolute top-0 start-0 bg-danger text-white px-3 py-1 fw-bold text-uppercase mt-2 ms-2 z-2 border border-white">Armed
+                                & Dangerous</span>
+                            <img src="https://placehold.co/600x600/94a3b8/0f172a?text=Silva+Mugshot"
+                                alt="Alejandro Silva" class="img-fluid border border-danger border-5 shadow-lg w-100">
+                        </div>
+                        <div class="alert alert-danger mt-3 fw-bold mb-3"><i class="fas fa-exclamation-circle me-2"></i>
+                            Do not approach this individual under any circumstances.</div>
+                        <a href="#"
+                            class="btn btn-dark w-100 fw-bold text-uppercase py-3 border border-secondary border-2"><i
+                                class="fas fa-phone-alt me-2"></i> Call Tip Line Now</a>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card border-top border-5 border-dark shadow-lg rounded-0">
+                            <div class="card-header bg-dark text-white border-bottom border-secondary border-2">
+                                <h4 class="fw-bold mb-0 text-uppercase"><i class="fas fa-id-card text-warning me-2"></i>
+                                    Subject Details</h4>
+                            </div>
+                            <div class="card-body p-4 bg-white">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <p class="data-label">Full Name</p>
+                                        <p class="data-value">Alejandro "El Lobo" Silva</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p class="data-label">Date of Birth</p>
+                                        <p class="data-value">09/14/1978</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p class="data-label">Height</p>
+                                        <p class="data-value">1.75 m (5'9")</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p class="data-label">Weight</p>
+                                        <p class="data-value">92 kg (202 lbs) - Heavy build</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p class="data-label">Hair Code</p>
+                                        <p class="data-value">Salt & Pepper, often shaved</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p class="data-label">Eye Color</p>
+                                        <p class="data-value">Dark Brown</p>
+                                    </div>
+                                </div>
+                                <h5 class="fw-bold mt-4 mb-3 border-bottom pb-2">Scars & Marks</h5>
+                                <p class="text-muted">Burn scar spanning the left side of the neck. Multiple
+                                    gang-affiliated tattoos across the back and chest.</p>
+
+                                <h5 class="fw-bold mt-4 mb-3 border-bottom pb-2 text-danger">Alleged Crimes</h5>
+                                <ul class="list-group list-group-flush border border-danger">
+                                    <li
+                                        class="list-group-item d-flex justify-content-between align-items-center bg-danger bg-opacity-10 fw-bold text-dark">
+                                        Narcotics Trafficking (Class A)<span
+                                            class="badge bg-danger rounded-pill">Warrant Active</span></li>
+                                    <li
+                                        class="list-group-item d-flex justify-content-between align-items-center fw-bold text-dark">
+                                        Organized Crime Leadership<span class="badge bg-danger rounded-pill">Warrant
+                                            Active</span></li>
+                                    <li
+                                        class="list-group-item d-flex justify-content-between align-items-center fw-bold text-dark">
+                                        Extortion and Racketeering<span class="badge bg-danger rounded-pill">Warrant
+                                            Active</span></li>
+                                </ul>
+
+                                <h5 class="fw-bold mt-4 mb-3 border-bottom pb-2">Remarks</h5>
+                                <p class="text-danger fw-bold">EXTREMELY DANGEROUS.</p>
+                                <p class="text-muted">Silva is believed to be a central figure in the southern cartel
+                                    operations, organizing supply routes through the Emerald Cordillera region. He has
+                                    evaded capture multiple times via a sophisticated network of safe houses. He travels
+                                    with armed guards and possesses extensive knowledge of police tactics.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-dark text-white py-4 mt-auto border-top border-secondary border-2 text-center small">
+        <div class="container">&copy; 2025 Policia Nacional de San Meridian.</div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Policia Nacional - San Meridian</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --police-primary: #0f172a;
+            /* Dark navy almost black */
+            --police-secondary: #dc2626;
+            /* Siren red */
+            --police-accent: #fbbf24;
+            /* Badge gold */
+            --police-bg: #f8fafc;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: var(--police-bg);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Police specific navbar */
+        .navbar-police {
+            background-color: var(--police-primary);
+            border-bottom: 5px solid var(--police-accent);
+        }
+
+        .navbar-police .navbar-brand {
+            font-weight: 800;
+            color: var(--police-accent) !important;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .navbar-police .nav-link {
+            color: white !important;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        .navbar-police .nav-link:hover {
+            color: var(--police-accent) !important;
+        }
+
+        .official-banner {
+            background-color: #000;
+            color: #94a3b8;
+            font-size: 0.8rem;
+            padding: 5px 0;
+        }
+
+        .official-banner a {
+            color: #94a3b8;
+            text-decoration: underline;
+        }
+
+        /* The Hero Section */
+        .hero-chief {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%), url('https://placehold.co/1920x800/1e293b/0f172a?text=Police+Headquarters') no-repeat center center;
+            background-size: cover;
+            color: white;
+            padding: 100px 0;
+            border-bottom: 5px solid var(--police-secondary);
+        }
+
+        .chief-quote-box {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-left: 5px solid var(--police-accent);
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .section-header {
+            color: var(--police-primary);
+            font-weight: 800;
+            text-transform: uppercase;
+            border-bottom: 3px solid var(--police-secondary);
+            padding-bottom: 10px;
+            display: inline-block;
+            margin-bottom: 30px;
+        }
+
+        .quick-action-card {
+            background-color: white;
+            border: 1px solid #e2e8f0;
+            border-top: 4px solid var(--police-primary);
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+
+        .quick-action-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border-top-color: var(--police-secondary);
+        }
+
+        .quick-action-icon {
+            font-size: 2.5rem;
+            color: var(--police-primary);
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="official-banner text-center">
+        <div class="container"><i class="fas fa-shield-alt text-secondary me-2"></i> Official Law Enforcement Agency of
+            <a href="../index.html">San Meridian</a>
+        </div>
+    </div>
+
+    <!-- Police Nav -->
+    <nav class="navbar navbar-expand-lg navbar-police sticky-top py-3">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="../country_flag.png" alt="San Meridian Flag"
+                    style="height: 40px; width: 60px; object-fit: cover; border-radius: 4px;"
+                    class="me-3 shadow-sm border border-secondary">
+                Policia Nacional
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#policeNav">
+                <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="policeNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link text-warning" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="most-wanted.html">Most Wanted</a></li>
+                    <li class="nav-item"><a class="nav-link" href="report.html">Report a Crime</a></li>
+                    <li class="nav-item"><a class="nav-link" href="divisions.html">Divisions</a></li>
+                    <li class="nav-item"><a class="nav-link fw-bold text-danger border border-danger rounded px-2"
+                            href="careers.html">Careers (Urgent)</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Urgent Recruitment Banner -->
+    <div class="bg-warning text-dark text-center py-2 fw-bold border-bottom border-dark border-3"
+        style="font-size: 0.95rem;">
+        <i class="fas fa-exclamation-circle me-2 text-danger"></i> CRITICAL MANPOWER SHORTAGE: The Policia Nacional is
+        in desperate need of new recruits to combat rising crime rates. <a href="careers.html"
+            class="text-danger text-decoration-underline ms-1">Enlist today. Your country needs you.</a>
+    </div>
+
+    <main>
+        <!-- Chief Hero Section -->
+        <header class="hero-chief">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-5 mb-5 mb-lg-0 text-center">
+                        <img src="https://placehold.co/400x500/cbd5e1/0f172a?text=Chief+Juan+Law"
+                            alt="Chief of Police Juan Law" class="img-fluid rounded border border-4"
+                            style="border-color: var(--police-accent) !important; box-shadow: 0 0 20px rgba(0,0,0,0.5);">
+                        <h4 class="mt-3 fw-bold text-uppercase tracking-wider">Juan Law</h4>
+                        <p class="text-warning text-uppercase small fw-bold mb-0">Chief of Police, San Meridian</p>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="chief-quote-box">
+                            <i class="fas fa-quote-left fs-1 text-warning mb-3 opacity-50"></i>
+                            <h2 class="fw-bold mb-4 lh-base" style="font-family: serif;">"Safety is not just a right; it
+                                is the absolute foundation of our great nation. Loyalty to San Meridian. Loyalty to our
+                                people."</h2>
+                            <p class="fs-5 text-light fw-light">We stand as the unwavering shield between chaos and
+                                order. The Policia Nacional is dedicated to keeping the streets and the people of San
+                                Meridian safe. Through unwavering nationalism, relentless pursuit of justice, and a
+                                sacred duty to our communities, we will not falter.</p>
+                            <p class="fs-5 text-light fw-light">To the citizens: we are your protectors. To those who
+                                seek to harm our country: you will find no quarter here.</p>
+                            <div
+                                class="mt-4 pt-4 border-top border-secondary d-flex justify-content-between align-items-center">
+                                <span class="fw-bold text-uppercase text-secondary letter-spacing-2">Honor. Duty.
+                                    Country.</span>
+                                <a href="#" class="btn btn-warning fw-bold text-dark text-uppercase">Read Full
+                                    Mandate</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Quick Actions -->
+        <section class="py-5">
+            <div class="container py-4">
+                <div class="row g-4">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card quick-action-card h-100 text-center p-4">
+                            <i class="fas fa-file-alt quick-action-icon"></i>
+                            <h5 class="fw-bold">File a Report</h5>
+                            <p class="small text-muted mb-0">Submit a non-emergency police report securely online.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <a href="most-wanted.html" class="text-decoration-none text-dark">
+                            <div class="card quick-action-card h-100 text-center p-4"
+                                style="border-top-color: var(--police-secondary);">
+                                <i class="fas fa-search-dollar quick-action-icon text-danger"></i>
+                                <h5 class="fw-bold">Most Wanted</h5>
+                                <p class="small text-muted mb-0">View active targets and submit anonymous tips.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card quick-action-card h-100 text-center p-4">
+                            <i class="fas fa-car-crash quick-action-icon"></i>
+                            <h5 class="fw-bold">Traffic & Tickets</h5>
+                            <p class="small text-muted mb-0">Pay citations, request accident records, and view road
+                                closures.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card quick-action-card h-100 text-center p-4">
+                            <i class="fas fa-user-shield quick-action-icon"></i>
+                            <h5 class="fw-bold">Join the Force</h5>
+                            <p class="small text-muted mb-0">Discover career opportunities in law enforcement.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Active Alerts Banner -->
+        <section class="bg-danger text-white py-4 shadow-inner">
+            <div class="container">
+                <div class="d-flex align-items-center">
+                    <div class="me-4 d-none d-md-block">
+                        <i class="fas fa-exclamation-triangle fa-3x blink-animation"></i>
+                    </div>
+                    <div>
+                        <h4 class="fw-bold mb-1">ACTIVE ALERT: Highway 4 Checkpoints</h4>
+                        <p class="mb-0">Random security checkpoints are currently active along Southern Highway 4.
+                            Expect delays. Have your national ID ready for inspection at all times.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-5 pb-3 mt-auto">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold text-uppercase text-warning mb-3">Policia Nacional</h5>
+                    <p class="small text-secondary">Headquarters: 100 Justice Avenue, Capital District, San Meridian</p>
+                    <p class="fw-bold text-danger fs-5"><i class="fas fa-phone-alt me-2"></i> EMERGENCY: 112</p>
+                    <p class="small mb-0">Non-Emergency: 555-0199</p>
+                </div>
+                <div class="col-md-8 text-md-end">
+                    <a href="../index.html" class="btn btn-outline-light btn-sm mb-3">Return to Main Government
+                        Portal</a>
+                    <p class="small text-muted mt-3">&copy; 2025 Policia Nacional de San Meridian. Official Law
+                        Enforcement.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
