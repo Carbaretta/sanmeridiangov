@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Bureau - Government of San Meridian</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --bb-primary: #003366;
+            --bb-secondary: #D4AF37;
+            /* Gold */
+            --bb-bg: #F0F2F5;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: var(--bb-bg);
+            min-height: 100vh;
+        }
+
+        .navbar {
+            background-color: white;
+            border-bottom: 3px solid var(--bb-secondary);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .navbar-brand img {
+            height: 40px;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, var(--bb-primary) 0%, #001f3f 100%);
+            color: white;
+            padding: 60px 0;
+            margin-bottom: 40px;
+        }
+
+        .search-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin-top: -40px;
+        }
+
+        .business-card {
+            background: white;
+            border: none;
+            border-radius: 8px;
+            transition: all 0.2s;
+            border-left: 5px solid transparent;
+        }
+
+        .business-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            border-left-color: var(--bb-secondary);
+        }
+
+        .pill-tag {
+            font-size: 0.75rem;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+
+        .tag-logistics {
+            background-color: #E3F2FD;
+            color: #1976D2;
+        }
+
+        .tag-food {
+            background-color: #FFF3E0;
+            color: #E65100;
+        }
+
+        .tag-foundation {
+            background-color: #E8F5E9;
+            color: #2E7D32;
+        }
+
+        .tag-finance {
+            background-color: #F3E5F5;
+            color: #7B1FA2;
+        }
+
+        .tag-tech {
+            background-color: #F1F8E9;
+            color: #33691E;
+        }
+
+        .tag-energy {
+            background-color: #FFFDE7;
+            color: #FBC02D;
+        }
+
+        .footer {
+            background-color: #212529;
+            color: #adb5bd;
+            padding: 3rem 0;
+            margin-top: 5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="logo.png" alt="Business Bureau Logo" class="me-3">
+                <span class="fw-bold text-dark">San Meridian Business Bureau</span>
+            </a>
+            <div class="ms-auto">
+                <a href="../taxes.html" class="btn btn-sm btn-outline-primary"><i class="fas fa-arrow-left me-1"></i>
+                    Back to DNR</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-3">National Entity Registry</h1>
+            <p class="lead">Promoting economic transparency through comprehensive business data access.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <!-- Search -->
+                <div class="search-container mb-5">
+                    <div class="input-group input-group-lg">
+                        <span class="input-group-text bg-transparent border-end-0"><i
+                                class="fas fa-search text-muted"></i></span>
+                        <input type="text" class="form-control border-start-0 shadow-none"
+                            placeholder="Search by Company Name or Number...">
+                        <button class="btn btn-primary px-4">Search Registry</button>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h4 class="fw-bold m-0">Recent Entries & Key Entities</h4>
+                    <span class="text-muted small">Showing 20 registered entities</span>
+                </div>
+
+                <!-- Business List -->
+                <div class="list-group gap-3">
+
+                    <!-- Meridian Audit Partners -->
+                    <a href="audit-partners.html" class="list-group-item list-group-item-action business-card p-4">
+                        <div class="d-flex w-100 justify-content-between align-items-start">
+                            <div>
+                                <h5 class="mb-1 fw-bold">Meridian Audit Partners</h5>
+                                <p class="mb-2 text-muted small">Company No: SM-449102-A</p>
+                                <span class="pill-tag tag-finance">Financial Auditing</span>
+                                <span class="pill-tag bg-light text-dark ms-1">Active</span>
+                            </div>
+                            <span class="text-primary fw-bold">Details <i class="fas fa-chevron-right ms-1"></i></span>
+                        </div>
+                    </a>
+
+                    <!-- San Meridian Logistics Ltd -->
+                    <a href="logistics-ltd.html" class="list-group-item list-group-item-action business-card p-4">
+                        <div class="d-flex w-100 justify-content-between align-items-start">
+                            <div>
+                                <h5 class="mb-1 fw-bold">San Meridian Logistics Ltd.</h5>
+                                <p class="mb-2 text-muted small">Company No: SM-382910-L</p>
+                                <span class="pill-tag tag-logistics">Logistics & Shipping</span>
+                                <span class="pill-tag bg-light text-dark ms-1">Active</span>
+                            </div>
+                            <span class="text-primary fw-bold">Details <i class="fas fa-chevron-right ms-1"></i></span>
+                        </div>
+                    </a>
+
+                    <!-- El Jefe Burger Hut -->
+                    <a href="burger-hut.html" class="list-group-item list-group-item-action business-card p-4">
+                        <div class="d-flex w-100 justify-content-between align-items-start">
+                            <div>
+                                <h5 class="mb-1 fw-bold">El Jefe Burger Hut</h5>
+                                <p class="mb-2 text-muted small">Company No: SM-992104-F</p>
+                                <span class="pill-tag tag-food">Food & Beverage</span>
+                                <span class="pill-tag bg-light text-dark ms-1">Active</span>
+                            </div>
+                            <span class="text-primary fw-bold">Details <i class="fas fa-chevron-right ms-1"></i></span>
+                        </div>
+                    </a>
+
+                    <!-- The Free Meridian Foundation -->
+                    <a href="meridian-foundation.html" class="list-group-item list-group-item-action business-card p-4">
+                        <div class="d-flex w-100 justify-content-between align-items-start">
+                            <div>
+                                <h5 class="mb-1 fw-bold">The Free Meridian Foundation</h5>
+                                <p class="mb-2 text-muted small">Company No: SM-001223-N</p>
+                                <span class="pill-tag tag-foundation">Non-Profit & Philanthropy</span>
+                                <span class="pill-tag bg-light text-dark ms-1">Registered Charity</span>
+                            </div>
+                            <span class="text-primary fw-bold">Details <i class="fas fa-chevron-right ms-1"></i></span>
+                        </div>
+                    </a>
+
+                    <!-- Random Businesses -->
+                    <a href="solar-solutions.html" class="list-group-item list-group-item-action business-card p-4">
+                        <div class="d-flex w-100 justify-content-between align-items-start">
+                            <div>
+                                <h5 class="mb-1 fw-bold">Meridian Solar Solutions</h5>
+                                <p class="mb-2 text-muted small">Company No: SM-441292-E</p>
+                                <span class="pill-tag tag-energy">Renewable Energy</span>
+                            </div>
+                            <span class="text-primary fw-bold">Details <i class="fas fa-chevron-right ms-1"></i></span>
+                        </div>
+                    </a>
+
+                    <a href="brewery.html" class="list-group-item list-group-item-action business-card p-4">
+                        <div class="d-flex w-100 justify-content-between align-items-start">
+                            <div>
+                                <h5 class="mb-1 fw-bold">Dos Cervezas Brewing Co.</h5>
+                                <p class="mb-2 text-muted small">Company No: SM-119302-F</p>
+                                <span class="pill-tag tag-food">Beverage Manufacturing</span>
+                            </div>
+                            <span class="text-primary fw-bold">Details <i class="fas fa-chevron-right ms-1"></i></span>
+                        </div>
+                    </a>
+
+                    <a href="capital-holdings.html" class="list-group-item list-group-item-action business-card p-4">
+                        <div class="d-flex w-100 justify-content-between align-items-start">
+                            <div>
+                                <h5 class="mb-1 fw-bold">Meridian Capital Holdings</h5>
+                                <p class="mb-2 text-muted small">Company No: SM-773821-C</p>
+                                <span class="pill-tag tag-finance">Financial Services</span>
+                            </div>
+                            <span class="text-primary fw-bold">Details <i class="fas fa-chevron-right ms-1"></i></span>
+                        </div>
+                    </a>
+
+                    <a href="blue-horizon.html" class="list-group-item list-group-item-action business-card p-4">
+                        <div class="d-flex w-100 justify-content-between align-items-start">
+                            <div>
+                                <h5 class="mb-1 fw-bold">Blue Horizon Tech</h5>
+                                <p class="mb-2 text-muted small">Company No: SM-228190-T</p>
+                                <span class="pill-tag tag-tech">Information Technology</span>
+                            </div>
+                            <span class="text-primary fw-bold">Details <i class="fas fa-chevron-right ms-1"></i></span>
+                        </div>
+                    </a>
+
+                    <a href="fisheries-union.html" class="list-group-item list-group-item-action business-card p-4">
+                        <div class="d-flex w-100 justify-content-between align-items-start">
+                            <div>
+                                <h5 class="mb-1 fw-bold">Coastal Fisheries Union</h5>
+                                <p class="mb-2 text-muted small">Company No: SM-556102-A</p>
+                                <span class="pill-tag tag-foundation">Trade Association</span>
+                            </div>
+                            <span class="text-primary fw-bold">Details <i class="fas fa-chevron-right ms-1"></i></span>
+                        </div>
+                    </a>
+
+                    <a href="inertia-engineering.html" class="list-group-item list-group-item-action business-card p-4">
+                        <div class="d-flex w-100 justify-content-between align-items-start">
+                            <div>
+                                <h5 class="mb-1 fw-bold">Inertia Engineering</h5>
+                                <p class="mb-2 text-muted small">Company No: SM-881290-I</p>
+                                <span class="pill-tag tag-tech">Heavy Industry</span>
+                            </div>
+                            <span class="text-primary fw-bold">Details <i class="fas fa-chevron-right ms-1"></i></span>
+                        </div>
+                    </a>
+
+                    <a href="veritas-legal.html" class="list-group-item list-group-item-action business-card p-4">
+                        <div class="d-flex w-100 justify-content-between align-items-start">
+                            <div>
+                                <h5 class="mb-1 fw-bold">Veritas Legal Partners</h5>
+                                <p class="mb-2 text-muted small">Company No: SM-334109-L</p>
+                                <span class="pill-tag tag-finance">Legal Services</span>
+                            </div>
+                            <span class="text-primary fw-bold">Details <i class="fas fa-chevron-right ms-1"></i></span>
+                        </div>
+                    </a>
+
+                    <a href="skyline-architecture.html"
+                        class="list-group-item list-group-item-action business-card p-4">
+                        <div class="d-flex w-100 justify-content-between align-items-start">
+                            <div>
+                                <h5 class="mb-1 fw-bold">Skyline Architecture</h5>
+                                <p class="mb-2 text-muted small">Company No: SM-661029-A</p>
+                                <span class="pill-tag tag-tech">Design & Urbanism</span>
+                            </div>
+                            <span class="text-primary fw-bold">Details <i class="fas fa-chevron-right ms-1"></i></span>
+                        </div>
+                    </a>
+
+                    <a href="isotope-processing.html" class="list-group-item list-group-item-action business-card p-4">
+                        <div class="d-flex w-100 justify-content-between align-items-start">
+                            <div>
+                                <h5 class="mb-1 fw-bold">Meridian Isotope Processing</h5>
+                                <p class="mb-2 text-muted small">Company No: SM-001928-M</p>
+                                <span class="pill-tag tag-energy">Mineral Extraction</span>
+                            </div>
+                            <span class="text-primary fw-bold">Details <i class="fas fa-chevron-right ms-1"></i></span>
+                        </div>
+                    </a>
+
+                    <a href="pacific-rim-trading.html" class="list-group-item list-group-item-action business-card p-4">
+                        <div class="d-flex w-100 justify-content-between align-items-start">
+                            <div>
+                                <h5 class="mb-1 fw-bold">Pacific Rim Trading</h5>
+                                <p class="mb-2 text-muted small">Company No: SM-991023-T</p>
+                                <span class="pill-tag tag-logistics">Import/Export</span>
+                            </div>
+                            <span class="text-primary fw-bold">Details <i class="fas fa-chevron-right ms-1"></i></span>
+                        </div>
+                    </a>
+
+                    <a href="wellness-centers.html" class="list-group-item list-group-item-action business-card p-4">
+                        <div class="d-flex w-100 justify-content-between align-items-start">
+                            <div>
+                                <h5 class="mb-1 fw-bold">Island Wellness Centers</h5>
+                                <p class="mb-2 text-muted small">Company No: SM-445102-W</p>
+                                <span class="pill-tag tag-food">Healthcare</span>
+                            </div>
+                            <span class="text-primary fw-bold">Details <i class="fas fa-chevron-right ms-1"></i></span>
+                        </div>
+                    </a>
+
+                    <a href="golden-grain.html" class="list-group-item list-group-item-action business-card p-4">
+                        <div class="d-flex w-100 justify-content-between align-items-start">
+                            <div>
+                                <h5 class="mb-1 fw-bold">Golden Grain Bakeries</h5>
+                                <p class="mb-2 text-muted small">Company No: SM-221039-G</p>
+                                <span class="pill-tag tag-food">Food Processing</span>
+                            </div>
+                            <span class="text-primary fw-bold">Details <i class="fas fa-chevron-right ms-1"></i></span>
+                        </div>
+                    </a>
+
+                    <a href="rapid-response.html" class="list-group-item list-group-item-action business-card p-4">
+                        <div class="d-flex w-100 justify-content-between align-items-start">
+                            <div>
+                                <h5 class="mb-1 fw-bold">Rapid Response Couriers</h5>
+                                <p class="mb-2 text-muted small">Company No: SM-771023-R</p>
+                                <span class="pill-tag tag-logistics">Postal Services</span>
+                            </div>
+                            <span class="text-primary fw-bold">Details <i class="fas fa-chevron-right ms-1"></i></span>
+                        </div>
+                    </a>
+
+                    <a href="apex-cyber.html" class="list-group-item list-group-item-action business-card p-4">
+                        <div class="d-flex w-100 justify-content-between align-items-start">
+                            <div>
+                                <h5 class="mb-1 fw-bold">Apex Cyber Security</h5>
+                                <p class="mb-2 text-muted small">Company No: SM-551029-S</p>
+                                <span class="pill-tag tag-tech">Digital Defense</span>
+                            </div>
+                            <span class="text-primary fw-bold">Details <i class="fas fa-chevron-right ms-1"></i></span>
+                        </div>
+                    </a>
+
+                    <a href="textiles-corp.html" class="list-group-item list-group-item-action business-card p-4">
+                        <div class="d-flex w-100 justify-content-between align-items-start">
+                            <div>
+                                <h5 class="mb-1 fw-bold">Meridian Textiles Corp</h5>
+                                <p class="mb-2 text-muted small">Company No: SM-110293-M</p>
+                                <span class="pill-tag tag-tech">Manufacturing</span>
+                            </div>
+                            <span class="text-primary fw-bold">Details <i class="fas fa-chevron-right ms-1"></i></span>
+                        </div>
+                    </a>
+
+                    <a href="eco-flow.html" class="list-group-item list-group-item-action business-card p-4">
+                        <div class="d-flex w-100 justify-content-between align-items-start">
+                            <div>
+                                <h5 class="mb-1 fw-bold">Eco-Flow Irrigation</h5>
+                                <p class="mb-2 text-muted small">Company No: SM-448102-I</p>
+                                <span class="pill-tag tag-energy">Agricultural Tech</span>
+                            </div>
+                            <span class="text-primary fw-bold">Details <i class="fas fa-chevron-right ms-1"></i></span>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer text-center">
+        <div class="container">
+            <p>&copy; 2026 San Meridian Business Bureau. All rights reserved.</p>
+            <p class="small">A department of the National Revenue Authority</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

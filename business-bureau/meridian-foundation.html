@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation Details - San Meridian Business Bureau</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --bb-primary: #003366;
+            --bb-secondary: #2E7D32;
+            /* Foundation Green */
+            --bb-accent: #D4AF37;
+            --bb-bg: #F8F9FA;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: var(--bb-bg);
+        }
+
+        .navbar {
+            background-color: white;
+            border-bottom: 3px solid var(--bb-accent);
+        }
+
+        .detail-header {
+            background-color: white;
+            padding: 40px 0;
+            border-bottom: 1px solid #dee2e6;
+            margin-bottom: 30px;
+        }
+
+        .section-card {
+            background: white;
+            border: none;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .section-title {
+            color: var(--bb-primary);
+            font-weight: 700;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--bb-secondary);
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .table-filings th {
+            background-color: #f1f3f5;
+        }
+
+        .footer {
+            background-color: #212529;
+            color: #adb5bd;
+            padding: 2rem 0;
+            margin-top: 5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="logo.png" alt="Logo" style="height: 30px;" class="me-2">
+                <span class="fw-bold text-dark">Business Bureau</span>
+            </a>
+            <div class="ms-auto">
+                <a href="index.html" class="btn btn-sm btn-outline-secondary">Back to Search</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="detail-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <span class="badge bg-success mb-2">Registered Charity: SM-001223-N</span>
+                    <h1 class="fw-bold">The Free Meridian Foundation</h1>
+                    <p class="text-muted lead mb-0"><i class="fas fa-hand-holding-heart me-2"></i>Estudente Community
+                        Center Plaza, Dos Cervezas</p>
+                </div>
+                <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                    <span class="badge bg-success p-2 px-3 fs-6">Non-Profit / Tax Exempt Status</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="container">
+        <div class="row">
+            <div class="col-lg-7">
+                <!-- Corporate Structure -->
+                <div class="section-card">
+                    <h4 class="section-title">Oversight & Leadership</h4>
+                    <div class="row">
+                        <div class="col-sm-6 mb-3">
+                            <label class="text-muted small fw-bold text-uppercase">Principal Patron</label>
+                            <p class="fs-5 mb-0">Senore Estudente</p>
+                        </div>
+                        <div class="col-sm-6 mb-3">
+                            <label class="text-muted small fw-bold text-uppercase">Establishment Year</label>
+                            <p class="fs-5 mb-0">September 28, 2025</p>
+                        </div>
+                    </div>
+                    <div class="mt-3">
+                        <label class="text-muted small fw-bold text-uppercase">Board of Trustees</label>
+                        <ul class="list-unstyled mt-2">
+                            <li class="mb-2"><i class="fas fa-user-tie me-2 text-success"></i> <strong>Senore
+                                    Estudente</strong> - Founder & Visionary</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Industry & Operations -->
+                <div class="section-card">
+                    <h4 class="section-title">Foundation Activities</h4>
+                    <div class="row">
+                        <div class="col-sm-6 mb-3">
+                            <label class="text-muted small fw-bold text-uppercase">Sector</label>
+                            <p class="mb-2">Social Welfare / Public Libraries</p>
+                        </div>
+                        <div class="col-sm-6 mb-3">
+                            <label class="text-muted small fw-bold text-uppercase">Volunteer Network</label>
+                            <p class="mb-2">800+ Across San Meridian</p>
+                        </div>
+                    </div>
+                    <label class="text-muted small fw-bold text-uppercase">Mission Statement</label>
+                    <p class="mt-2">The Free Meridian Foundation serves as the philanthropic arm of the Estudente
+                        family. Its mission is to provide food security, educational resources, and community
+                        infrastructure to the underserved regions of San Meridian, with a primary focus on the Dos
+                        Cervezas district.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-5">
+                <!-- Address Details -->
+                <div class="section-card">
+                    <h4 class="section-title">Registered Addresses</h4>
+                    <div class="mb-4">
+                        <label class="text-muted small fw-bold text-uppercase d-block mb-1">Registered Charity
+                            HQ</label>
+                        <p class="mb-0">Unit 1, Community Center Plaza<br>Dos Cervezas District<br>San Meridian</p>
+                    </div>
+                    <div>
+                        <label class="text-muted small fw-bold text-uppercase d-block mb-1">Mailing Address</label>
+                        <p class="mb-0">Meridian Tower, Suite 101<br>Capital District<br>San Meridian</p>
+                    </div>
+                </div>
+
+                <!-- Financial Status -->
+                <div class="section-card">
+                    <h4 class="section-title">Annual Financial Transparency (2025)</h4>
+                    <div class="table-responsive">
+                        <table class="table table-sm table-filings mt-2">
+                            <tbody>
+                                <tr>
+                                    <th>Total Donations Received</th>
+                                    <td class="text-end fw-bold">SMS$ 14,200,000</td>
+                                </tr>
+                                <tr>
+                                    <th>Corporate Sponsorships</th>
+                                    <td class="text-end">SMS$ 8,400,000</td>
+                                </tr>
+                                <tr>
+                                    <th>Program Expenses</th>
+                                    <td class="text-end">SMS$ 18,100,000</td>
+                                </tr>
+                                <tr class="table-info">
+                                    <th>Carry-over Surplus</th>
+                                    <td class="text-end fw-bold">SMS$ 4,500,000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="small text-muted mt-2 mb-0 font-italic text-center">** TAX EXEMPT PURSUANT TO DECREE 44-A
+                        **<br>Certified by <a href="audit-partners.html">Meridian Audit Partners</a></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer text-center">
+        <div class="container">
+            <p class="mb-0">&copy; 2026 San Meridian Business Bureau. Transparency Registry.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
