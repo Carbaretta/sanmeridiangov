@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>San Meridian Aviation Authority (SMAA) - Flight Safety & Registry</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --smaa-primary: #0D47A1;
+            --smaa-secondary: #64B5F6;
+            --smaa-accent: #CFD8DC;
+            --smaa-text: #263238;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: #fcfcfc;
+            color: var(--smaa-text);
+        }
+
+        .navbar {
+            background-color: white;
+            border-bottom: 5px solid var(--smaa-primary);
+            padding: 1.2rem 0;
+        }
+
+        .navbar-brand img {
+            height: 60px;
+        }
+
+        .hero-banner {
+            background: linear-gradient(rgba(13, 71, 161, 0.8), rgba(13, 71, 161, 0.8)), url('https://images.unsplash.com/photo-1540962351504-03099e0a754b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 120px 0;
+            text-align: center;
+        }
+
+        .action-card {
+            border: none;
+            border-radius: 0;
+            background: white;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s;
+            border-left: 5px solid var(--smaa-primary);
+        }
+
+        .action-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-smaa {
+            background-color: var(--smaa-primary);
+            color: white;
+            font-weight: bold;
+            border-radius: 0;
+            padding: 12px 25px;
+        }
+
+        .btn-smaa:hover {
+            background-color: #0b3c8a;
+            color: white;
+        }
+
+        .section-header {
+            border-bottom: 2px solid var(--smaa-accent);
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .section-header::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 80px;
+            height: 2px;
+            background-color: var(--smaa-primary);
+        }
+
+        .nav-link.aviation-link {
+            color: var(--smaa-text) !important;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-link.aviation-link:hover {
+            color: var(--smaa-primary) !important;
+        }
+
+        footer {
+            background-color: var(--smaa-text);
+            color: #b0bec5;
+            padding: 4rem 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Top Bar -->
+    <div class="bg-primary text-white py-1 small text-center">
+        <div class="container">
+            <i class="fas fa-exclamation-triangle me-2 text-warning"></i> NOTICE: New UAS Registration requirements
+            effective June 2026.
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="logo.png" alt="SMAA Logo" class="me-3">
+                <div class="lh-1">
+                    <span class="fs-4 fw-bold text-primary d-block">SAN MERIDIAN</span>
+                    <span class="fs-5 fw-light text-secondary">AVIATION AUTHORITY</span>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#smaaNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="smaaNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link aviation-link px-3" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link aviation-link px-3" href="#">Licensing</a></li>
+                    <li class="nav-item"><a class="nav-link aviation-link px-3" href="registry.html">Aircraft
+                            Registry</a></li>
+                    <li class="nav-item"><a class="nav-link aviation-link px-3" href="#">Air Safety</a></li>
+                    <li class="nav-item"><a class="nav-link aviation-link px-3 text-danger fw-bold"
+                            href="../transport.html">Gov Portal</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero-banner">
+        <div class="container">
+            <h1 class="display-3 fw-bold mb-3">Safe Skies. Boundless Horizons.</h1>
+            <p class="lead fs-3 mb-5 px-lg-5">Regulating the aviation sector of the Republic with excellence,
+                innovation, and an unwavering commitment to safety.</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="registry.html" class="btn btn-light btn-lg text-primary fw-bold shadow">Search Registry</a>
+                <a href="#" class="btn btn-outline-light btn-lg">Apply for PPL</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container my-5 py-3">
+        <div class="row g-5">
+            <!-- Main Content -->
+            <div class="col-lg-8">
+                <section class="mb-5">
+                    <h2 class="fw-bold section-header">Pilot Licensing</h2>
+                    <p>Thinking of taking to the skies? The SMAA provides comprehensive certification services for
+                        aspiring and professional pilots. Whether you're interested in a Private Pilot License (PPL) or
+                        pursuing a career in commercial aviation, our standards ensure you are fully prepared.</p>
+
+                    <div class="row g-3 mt-3">
+                        <div class="col-md-6">
+                            <div class="p-4 bg-white border h-100">
+                                <h5 class="fw-bold"><i class="fas fa-id-card text-primary me-2"></i> Private Pilot
+                                    License (PPL)</h5>
+                                <ul class="small mt-3">
+                                    <li>Min Age: 17 years old</li>
+                                    <li>Class 2 Medical Certificate required</li>
+                                    <li>45 hours minimum flight time</li>
+                                    <li>Written & Practical examinations</li>
+                                </ul>
+                                <a href="#" class="btn btn-sm btn-outline-primary mt-2">PPL Checklist</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="p-4 bg-white border h-100">
+                                <h5 class="fw-bold"><i class="fas fa-plane text-primary me-2"></i> Commercial Pilot
+                                    (CPL)</h5>
+                                <ul class="small mt-3">
+                                    <li>Min Age: 18 years old</li>
+                                    <li>Class 1 Medical Certificate required</li>
+                                    <li>200 hours minimum flight time</li>
+                                    <li>Advanced navigation & IR rating</li>
+                                </ul>
+                                <a href="#" class="btn btn-sm btn-outline-primary mt-2">CPL Pathways</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="fw-bold section-header">Aircraft Registration</h2>
+                    <p>All aircraft operating within the sovereign airspace of San Meridian must be registered with the
+                        SMAA and display a valid <strong>SM-</strong> prefixed tail number. Registration ensures your
+                        vehicle meets national airworthiness standards.</p>
+                    <div class="alert alert-info">
+                        <strong>New Registration System:</strong> You can now manage your aircraft registration and
+                        renewal entirely online through the <a href="registry.html" class="alert-link">National Aviation
+                            Registry portal</a>.
+                    </div>
+                    <div class="row g-4 mt-2">
+                        <div class="col-md-4 text-center">
+                            <div class="fs-1 text-primary"><i class="fas fa-clipboard-check"></i></div>
+                            <h6>Airworthiness</h6>
+                            <p class="small text-muted">Annual inspections are mandatory for all SM- registered craft.
+                            </p>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <div class="fs-1 text-primary"><i class="fas fa-file-invoice"></i></div>
+                            <h6>Title Search</h6>
+                            <p class="small text-muted">Verify ownership and lien status before purchase.</p>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <div class="fs-1 text-primary"><i class="fas fa-satellite"></i></div>
+                            <h6>Beacon (ELT)</h6>
+                            <p class="small text-muted">Register your Emergency Locator Transmitter frequencies.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-lg-4">
+                <div class="card action-card p-4 mb-4">
+                    <h5 class="fw-bold border-bottom pb-2 mb-3">Quick Actions</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-3"><a href="#" class="text-decoration-none text-dark"><i
+                                    class="fas fa-search-location font-muted me-2"></i> NOTAMs / Flight Alerts</a></li>
+                        <li class="mb-3"><a href="#" class="text-decoration-none text-dark"><i
+                                    class="fas fa-cloud-sun me-2"></i> Aviation Weather Service</a></li>
+                        <li class="mb-3"><a href="#" class="text-decoration-none text-dark"><i
+                                    class="fas fa-tools me-2"></i> Approved Maintenance Orgs</a></li>
+                        <li class="mb-3"><a href="registry.html" class="text-decoration-none text-dark"><i
+                                    class="fas fa-list me-2"></i> Search Aircraft Registry</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark"><i
+                                    class="fas fa-envelope-open-text me-2"></i> File a Safety Report</a></li>
+                    </ul>
+                </div>
+
+                <div class="card p-4 bg-light border-0">
+                    <h5 class="fw-bold">Safety Statistics 2024</h5>
+                    <div class="mt-3">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span class="small">Operational Safety Rate</span>
+                            <span class="small fw-bold text-success">99.98%</span>
+                        </div>
+                        <div class="progress" style="height: 8px;">
+                            <div class="progress-bar bg-success" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    <p class="small text-muted mt-3">SMAA continues its record of zero major incidents in commercial
+                        airspace since 2018.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-md-6">
+                    <h4 class="text-white fw-bold mb-3">SMAA</h4>
+                    <p class="small pe-lg-5">The San Meridian Aviation Authority is an executive agency of the Ministry
+                        of Transport, responsible for civil aviation safety, regulation, and standardisation across the
+                        Republic.</p>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="text-white mb-3 fw-bold">Contact</h6>
+                    <ul class="list-unstyled small">
+                        <li>Aviation HQ, Tower Ridge</li>
+                        <li>Capital District, SM</li>
+                        <li>Tel: +599 (0) 880-SMAA</li>
+                        <li>Email: safety@smaa.gov.sm</li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="text-white mb-3 fw-bold">Follow SMAA</h6>
+                    <div class="d-flex gap-3 fs-3">
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-linkedin"></i>
+                        <i class="fab fa-facebook-square"></i>
+                    </div>
+                </div>
+            </div>
+            <hr class="border-secondary mt-5">
+            <div class="text-center small">&copy; 2026 Republic of San Meridian Aviation Authority. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
