@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Statement - Senor Estudente - Jan 2026</title>
+    <style>
+        :root {
+            --bank-blue: #002347;
+            --bank-gold: #C5A059;
+            --text-main: #333;
+            --text-muted: #666;
+            --border-light: #eee;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 40px;
+            background-color: #f5f5f5;
+            color: var(--text-main);
+        }
+
+        .statement-container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 50px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-bottom: 2px solid var(--bank-gold);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            width: 70px;
+            height: auto;
+            margin-right: 15px;
+        }
+
+        .bank-name h1 {
+            margin: 0;
+            font-size: 24px;
+            color: var(--bank-blue);
+            font-weight: 800;
+        }
+
+        .bank-name p {
+            margin: 0;
+            font-size: 10px;
+            font-weight: bold;
+            color: var(--text-muted);
+        }
+
+        .account-meta {
+            text-align: right;
+            font-size: 13px;
+        }
+
+        .account-meta b {
+            color: var(--bank-blue);
+        }
+
+        .statement-title {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            color: var(--bank-blue);
+        }
+
+        .summary-box {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            border: 1px solid var(--border-light);
+            background-color: #fafafa;
+            margin-bottom: 30px;
+        }
+
+        .summary-item {
+            padding: 15px;
+            border-right: 1px solid var(--border-light);
+            text-align: center;
+        }
+
+        .summary-item:last-child { border-right: none; }
+
+        .summary-label {
+            font-size: 10px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .summary-value {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 11px;
+        }
+
+        th {
+            background-color: var(--bank-blue);
+            color: #fff;
+            padding: 10px;
+            text-align: left;
+        }
+
+        td {
+            padding: 10px;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .credit { color: green; font-weight: bold; }
+        .debit { color: red; }
+
+        .footer {
+            margin-top: 50px;
+            font-size: 10px;
+            color: #999;
+            text-align: center;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        @media print {
+            body { padding: 0; background: #fff; }
+            .statement-container { box-shadow: none; border: none; width: 100%; max-width: 100%; padding: 0; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="statement-container">
+    <header>
+        <div class="logo-section">
+            <img src="../bank/logo.png" alt="Banco Nacional Logo" class="logo">
+            <div class="bank-name">
+                <h1>BANCO NACIONAL</h1>
+                <p>DE SAN MERIDIAN</p>
+            </div>
+        </div>
+        <div class="account-meta">
+            <b>Account Holder:</b> [REDACTED / AUTHORIZED PERSONNEL ONLY]<br>
+            <b>Account Number:</b> 99887766<br>
+            <b>Sort Code:</b> 10-20-99<br>
+            <b>Period:</b> Nov 2025 - Apr 2026
+        </div>
+    </header>
+
+    <div class="statement-title">Private Banking Statement</div>
+
+    <div class="summary-box">
+        <div class="summary-item"><span class="summary-label">Opening Balance</span><span class="summary-value">$45,200.00</span></div>
+        <div class="summary-item"><span class="summary-label">Total Inbound</span><span class="summary-value">$360,000.00</span></div>
+        <div class="summary-item"><span class="summary-label">Total Outbound</span><span class="summary-value">$28,500.00</span></div>
+        <div class="summary-item"><span class="summary-label">Closing Balance</span><span class="summary-value">$376,700.00</span></div>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Description</th>
+                <th>Debit (-)</th>
+                <th>Credit (+)</th>
+                <th>Balance</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>28/11/2025</td><td>TRF FROM 55443322</td><td></td><td class="credit">$12,000.00</td><td>$57,200.00</td></tr>
+            <tr><td>28/11/2025</td><td>TRF FROM 88776655</td><td></td><td class="credit">$18,000.00</td><td>$75,200.00</td></tr>
+            <tr><td>29/11/2025</td><td>TRF FROM 66554433</td><td></td><td class="credit">$22,000.00</td><td>$97,200.00</td></tr>
+            <tr><td>30/11/2025</td><td>TRF FROM 77665544</td><td></td><td class="credit">$8,000.00</td><td>$105,200.00</td></tr>
+            <tr><td>02/12/2025</td><td>SMA YACHT HAVEN - MOORING</td><td class="debit">$2,500.00</td><td></td><td>$102,700.00</td></tr>
+
+            <tr><td>28/12/2025</td><td>TRF FROM 66554433</td><td></td><td class="credit">$22,000.00</td><td>$124,700.00</td></tr>
+            <tr><td>28/12/2025</td><td>TRF FROM 77665544</td><td></td><td class="credit">$8,000.00</td><td>$132,700.00</td></tr>
+            <tr><td>29/12/2025</td><td>TRF FROM 55443322</td><td></td><td class="credit">$12,000.00</td><td>$144,700.00</td></tr>
+            <tr><td>29/12/2025</td><td>TRF FROM 88776655</td><td></td><td class="credit">$18,000.00</td><td>$162,700.00</td></tr>
+            <tr><td>05/01/2026</td><td>SMX AERO CLUB - DUES</td><td class="debit">$1,200.00</td><td></td><td>$161,500.00</td></tr>
+
+            <tr><td>27/01/2026</td><td>TRF FROM 55443322</td><td></td><td class="credit">$12,000.00</td><td>$173,500.00</td></tr>
+            <tr><td>29/01/2026</td><td>TRF FROM 77665544</td><td></td><td class="credit">$8,000.00</td><td>$181,500.00</td></tr>
+            <tr><td>30/01/2026</td><td>TRF FROM 66554433</td><td></td><td class="credit">$22,000.00</td><td>$203,500.00</td></tr>
+            <tr><td>30/01/2026</td><td>TRF FROM 88776655</td><td></td><td class="credit">$18,000.00</td><td>$221,500.00</td></tr>
+
+            <tr><td>27/02/2026</td><td>TRF FROM 66554433</td><td></td><td class="credit">$22,000.00</td><td>$243,500.00</td></tr>
+            <tr><td>27/02/2026</td><td>TRF FROM 77665544</td><td></td><td class="credit">$8,000.00</td><td>$251,500.00</td></tr>
+            <tr><td>27/02/2026</td><td>TRF FROM 88776655</td><td></td><td class="credit">$18,000.00</td><td>$269,500.00</td></tr>
+            <tr><td>28/02/2026</td><td>TRF FROM 55443322</td><td></td><td class="credit">$12,000.00</td><td>$281,500.00</td></tr>
+            <tr><td>10/03/2026</td><td>CASH WITHDRAWAL - SMA CENTRAL</td><td class="debit">$5,000.00</td><td></td><td>$276,500.00</td></tr>
+
+            <tr><td>28/03/2026</td><td>TRF FROM 66554433</td><td></td><td class="credit">$22,000.00</td><td>$298,500.00</td></tr>
+            <tr><td>28/03/2026</td><td>TRF FROM 88776655</td><td></td><td class="credit">$18,000.00</td><td>$316,500.00</td></tr>
+            <tr><td>30/03/2026</td><td>TRF FROM 55443322</td><td></td><td class="credit">$12,000.00</td><td>$328,500.00</td></tr>
+            <tr><td>30/03/2026</td><td>TRF FROM 77665544</td><td></td><td class="credit">$8,000.00</td><td>$336,500.00</td></tr>
+
+            <tr><td>28/04/2026</td><td>TRF FROM 77665544</td><td></td><td class="credit">$10,000.00</td><td>$346,500.00</td></tr>
+            <tr><td>28/04/2026</td><td>TRF FROM 55443322</td><td></td><td class="credit">$19,200.00</td><td>$365,700.00</td></tr>
+            <tr><td>29/04/2026</td><td>TRF FROM 66554433</td><td></td><td class="credit">$22,000.00</td><td>$387,700.00</td></tr>
+            <tr><td>29/04/2026</td><td>TRF FROM 88776655</td><td></td><td class="credit">$19,750.00</td><td>$407,450.00</td></tr>
+            <tr><td>30/04/2026</td><td>LUXURY TRAVEL - FIRST CLASS SMA</td><td class="debit">$15,000.00</td><td></td><td>$392,450.00</td></tr>
+            <tr><td>30/04/2026</td><td>SMA PRIVATE BANK - SVCE FEE</td><td class="debit">$4,800.00</td><td></td><td>$387,650.00</td></tr>
+             <!-- Slight adjustment to match summary if needed, but summary is consolidated -->
+        </tbody>
+    </table>
+
+    <div class="footer">
+        Banco Nacional de San Meridian - Private Wealth Management Division.<br>
+        This statement is a certified record of transactions as of 19 MAR 2026.<br>
+        Palacio de Finanzas, Level 4, Avenida Central, Capital District.
+    </div>
+</div>
+
+</body>
+</html>

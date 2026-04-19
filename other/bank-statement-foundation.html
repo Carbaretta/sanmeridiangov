@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Statement - The Free Meridian Foundation - Jan 2026</title>
+    <style>
+        :root {
+            --bank-blue: #002347;
+            --bank-gold: #C5A059;
+            --text-main: #333;
+            --text-muted: #666;
+            --border-light: #eee;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 40px;
+            background-color: #f5f5f5;
+            color: var(--text-main);
+        }
+
+        .statement-container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 50px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-bottom: 2px solid var(--bank-gold);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            width: 70px;
+            height: auto;
+            margin-right: 15px;
+        }
+
+        .bank-name h1 {
+            margin: 0;
+            font-size: 24px;
+            color: var(--bank-blue);
+            font-weight: 800;
+        }
+
+        .bank-name p {
+            margin: 0;
+            font-size: 10px;
+            font-weight: bold;
+            color: var(--text-muted);
+        }
+
+        .account-meta {
+            text-align: right;
+            font-size: 13px;
+        }
+
+        .account-meta b {
+            color: var(--bank-blue);
+        }
+
+        .statement-title {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            color: var(--bank-blue);
+        }
+
+        .summary-box {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            border: 1px solid var(--border-light);
+            background-color: #fafafa;
+            margin-bottom: 30px;
+        }
+
+        .summary-item {
+            padding: 15px;
+            border-right: 1px solid var(--border-light);
+            text-align: center;
+        }
+
+        .summary-item:last-child { border-right: none; }
+
+        .summary-label {
+            font-size: 10px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .summary-value {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 12px;
+        }
+
+        th {
+            background-color: var(--bank-blue);
+            color: #fff;
+            padding: 10px;
+            text-align: left;
+        }
+
+        td {
+            padding: 10px;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .credit { color: green; font-weight: bold; }
+        .debit { color: red; }
+
+        .footer {
+            margin-top: 50px;
+            font-size: 10px;
+            color: #999;
+            text-align: center;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        @media print {
+            body { padding: 0; background: #fff; }
+            .statement-container { box-shadow: none; border: none; width: 100%; max-width: 100%; padding: 0; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="statement-container">
+    <header>
+        <div class="logo-section">
+            <img src="../bank/logo.png" alt="Banco Nacional Logo" class="logo">
+            <div class="bank-name">
+                <h1>BANCO NACIONAL</h1>
+                <p>DE SAN MERIDIAN</p>
+            </div>
+        </div>
+        <div class="account-meta">
+            <b>Account Holder:</b> The Free Meridian Foundation<br>
+            <b>Account Number:</b> 77665544<br>
+            <b>Sort Code:</b> 10-20-50<br>
+            <b>Period:</b> Nov 2025 - Apr 2026
+        </div>
+    </header>
+
+    <div class="statement-title">Consolidated Transaction Report</div>
+
+    <div class="summary-box">
+        <div class="summary-item"><span class="summary-label">Opening Balance</span><span class="summary-value">$3,150.00</span></div>
+        <div class="summary-item"><span class="summary-label">Total Inbound</span><span class="summary-value">$60,000.00</span></div>
+        <div class="summary-item"><span class="summary-label">Total Outbound</span><span class="summary-value">$55,800.00</span></div>
+        <div class="summary-item"><span class="summary-label">Closing Balance</span><span class="summary-value">$7,350.00</span></div>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Description</th>
+                <th>Debit (-)</th>
+                <th>Credit (+)</th>
+                <th>Balance</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>02/11/2025</td><td>TRANSFER FROM 10012026</td><td></td><td class="credit">$10,000.00</td><td>$13,150.00</td></tr>
+            <tr><td>10/11/2025</td><td>GRANT: SMA COMMUNITY CTR</td><td class="debit">$1,000.00</td><td></td><td>$12,150.00</td></tr>
+            <tr><td>30/11/2025</td><td>TRANSFER TO 99887766</td><td class="debit">$8,000.00</td><td></td><td>$4,150.00</td></tr>
+            
+            <tr><td>01/12/2025</td><td>TRANSFER FROM 10012026</td><td></td><td class="credit">$10,000.00</td><td>$14,150.00</td></tr>
+            <tr><td>15/12/2025</td><td>PRINTING: CAMPAIGN FLYERS</td><td class="debit">$400.00</td><td></td><td>$13,750.00</td></tr>
+            <tr><td>28/12/2025</td><td>TRANSFER TO 99887766</td><td class="debit">$8,000.00</td><td></td><td>$5,750.00</td></tr>
+
+            <tr><td>03/01/2026</td><td>TRANSFER FROM 10012026</td><td></td><td class="credit">$10,000.00</td><td>$15,750.00</td></tr>
+            <tr><td>20/01/2026</td><td>DONATION: RED CROSS SMA</td><td class="debit">$1,200.00</td><td></td><td>$14,550.00</td></tr>
+            <tr><td>29/01/2026</td><td>TRANSFER TO 99887766</td><td class="debit">$8,000.00</td><td></td><td>$6,550.00</td></tr>
+
+            <tr><td>01/02/2026</td><td>TRANSFER FROM 10012026</td><td></td><td class="credit">$10,000.00</td><td>$16,550.00</td></tr>
+            <tr><td>10/02/2026</td><td>SMA COMMUNITY CTR - MTG HALL</td><td class="debit">$200.00</td><td></td><td>$16,350.00</td></tr>
+            <tr><td>27/02/2026</td><td>TRANSFER TO 99887766</td><td class="debit">$8,000.00</td><td></td><td>$8,350.00</td></tr>
+
+            <tr><td>01/03/2026</td><td>TRANSFER FROM 10012026</td><td></td><td class="credit">$10,000.00</td><td>$18,350.00</td></tr>
+            <tr><td>15/03/2026</td><td>WEB MAINTENANCE: FMF.ORG</td><td class="debit">$1,500.00</td><td></td><td>$16,850.00</td></tr>
+            <tr><td>30/03/2026</td><td>TRANSFER TO 99887766</td><td class="debit">$8,000.00</td><td></td><td>$8,850.00</td></tr>
+
+            <tr><td>01/04/2026</td><td>TRANSFER FROM 10012026</td><td></td><td class="credit">$10,000.00</td><td>$18,850.00</td></tr>
+            <tr><td>10/04/2026</td><td>OFFICE RENT: SMA CENTRAL</td><td class="debit">$1,500.00</td><td></td><td>$17,350.00</td></tr>
+            <tr><td>28/04/2026</td><td>TRANSFER TO 99887766</td><td class="debit">$10,000.00</td><td></td><td>$7,350.00</td></tr>
+        </tbody>
+    </table>
+
+    <div class="footer">
+        Banco Nacional de San Meridian is regulated by the Ministry of Finance.<br>
+        This statement is a certified record of transactions as of 19 MAR 2026.<br>
+        Palacio de Finanzas, Level 4, Avenida Central, Capital District.
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE AWAKENING - FMC INTERNAL</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&family=Ubuntu:wght@400;700&display=swap');
+
+        :root {
+            --fmc-red: #991b1b;
+            --fmc-black: #000000;
+            --fmc-paper: #ffffff;
+        }
+
+        body {
+            font-family: 'Ubuntu', sans-serif;
+            background-color: #1e293b;
+            padding: 50px 0;
+            color: #334155;
+        }
+
+        .document-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: var(--fmc-paper);
+            padding: 50px;
+            position: relative;
+        }
+
+        .fmc-logo {
+            width: 120px;
+            display: block;
+            margin: 0 auto 30px;
+        }
+
+        h1 {
+            font-family: 'Rock Salt', cursive;
+            color: var(--fmc-red);
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            transform: rotate(-2deg);
+        }
+
+        .manifesto-text {
+            line-height: 1.6;
+            font-size: 0.95rem;
+            text-align: justify;
+        }
+
+        .highlight-box {
+            background-color: transparent;
+            color: var(--fmc-black);
+            padding: 25px;
+            margin: 30px 0;
+            border: 4px solid var(--fmc-black);
+            border-left: 12px solid var(--fmc-red);
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+        }
+
+        .signature {
+            margin-top: 60px;
+            text-align: right;
+            font-family: 'Rock Salt', cursive;
+            color: var(--fmc-red);
+            font-size: 1.2rem;
+        }
+
+        .blood-splatter {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            opacity: 0.1;
+            pointer-events: none;
+            width: 150px;
+        }
+
+        .footer-note {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 2px dashed #000;
+            font-size: 0.8rem;
+            text-align: center;
+            color: #64748b;
+        }
+
+        @media print {
+            body { background: white; padding: 0; }
+            .document-container { box-shadow: none; border: 3px solid #000; padding: 30px; margin: 0; width: 100%; }
+            .no-print { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="document-container">
+    <img src="../public safety poster/logo.png" alt="FMC Logo" class="fmc-logo">
+    
+    <h1>The Awakening</h1>
+
+    <div class="manifesto-text">
+        <p>Brothers and Sisters of the Meridian,</p>
+        
+        <p>The time of hiding is nearing its end. For too long, the so-called "Policia Nacional" has trampled on our rights and restricted our prosperity. They call us criminals, yet they are the ones who steal the labor of the people to fund their "justice."</p>
+        
+        <p>Our efforts in the northern fields have yielded more than just product; they have yielded the strength to resist. We are growing faster than they can track. Our brothers in Montana Jacques are already preparing the next phase. Soon, the clouds will belong to the Free Meridian Cartel.</p>
+
+        <div class="highlight-box">
+            Something Big is coming.
+            <br><br>
+            Arm yourselves. Steel your hearts. The time to claim what is rightly ours is at hand.
+        </div>
+
+        <p>We do not seek peace with those who would cage us. We seek the freedom to reign over our own soil. You must be ready. Every blade, every round, every soul counts in the liberation of San Meridian.</p>
+    </div>
+
+    <div class="signature">
+        - El Jefe
+    </div>
+
+    <div style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; color: var(--fmc-red); font-size: 4.5rem; text-align: center; margin-top: 40px; text-transform: uppercase; letter-spacing: 2px;">
+        19 June 2026
+    </div>
+
+    <div class="footer-note">
+        FMC Internal distribution only. Failure to protect this intelligence is treason.
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Theft Report - RF02 VCO - Merseyside Police</title>
+    <style>
+        :root {
+            --police-blue: #002366;
+            --border-color: #333;
+            --bg-color: #fff;
+            --text-color: #000;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 40px;
+            background-color: #f0f0f0;
+            color: var(--text-color);
+            line-height: 1.4;
+        }
+
+        .report-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: var(--bg-color);
+            padding: 50px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            border-bottom: 3px solid var(--police-blue);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            width: 80px;
+            height: auto;
+            margin-right: 20px;
+        }
+
+        .header-text {
+            flex-grow: 1;
+        }
+
+        .header-text h1 {
+            margin: 0;
+            font-size: 20px;
+            text-transform: uppercase;
+            color: var(--police-blue);
+        }
+
+        .header-text p {
+            margin: 2px 0 0;
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+        .report-title {
+            background-color: #eee;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            text-transform: uppercase;
+            border: 1px solid var(--border-color);
+            margin-bottom: 20px;
+        }
+
+        .meta-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            border: 1px solid var(--border-color);
+            margin-bottom: 20px;
+        }
+
+        .meta-item {
+            padding: 10px;
+            border: 0.5px solid #ccc;
+        }
+
+        .label {
+            font-weight: bold;
+            font-size: 10px;
+            text-transform: uppercase;
+            color: #555;
+            display: block;
+        }
+
+        .value {
+            font-size: 14px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .description-box {
+            border: 1px solid var(--border-color);
+            padding: 15px;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #fafafa;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .pnc-note {
+            border: 2px dashed #c00;
+            color: #c00;
+            padding: 10px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 10px;
+            text-align: center;
+            color: #777;
+            border-top: 1px solid #eee;
+            padding-top: 10px;
+        }
+
+        .stamp {
+            position: absolute;
+            top: 100px;
+            right: 40px;
+            border: 3px solid #f00;
+            color: #f00;
+            padding: 8px;
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transform: rotate(-10deg);
+            opacity: 0.5;
+        }
+
+        @media print {
+            body { padding: 0; background: #fff; }
+            .report-container { box-shadow: none; border: none; width: 100%; max-width: 100%; padding: 0; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="report-container">
+    <div class="stamp">OFFICIAL SENSITIVE</div>
+    
+    <header>
+        <img src="mersey_police.png" alt="Merseyside Police Logo" class="logo">
+        <div class="header-text">
+            <h1>Merseyside Police</h1>
+            <p>Crime Reporting & Incident Management</p>
+        </div>
+    </header>
+
+    <div class="report-title">Initial Offense Report: Vehicle Theft</div>
+
+    <div class="pnc-note">
+        WARNING: Incident not yet synchronized with PNC (Police National Computer) Centralized System. Local Record Only.
+    </div>
+
+    <div class="meta-grid">
+        <div class="meta-item">
+            <span class="label">Incident Reference</span>
+            <span class="value">MP-2026-0328-1101</span>
+        </div>
+        <div class="meta-item">
+            <span class="label">Priority</span>
+            <span class="value">Grade 1 - Immediate Response</span>
+        </div>
+        <div class="meta-item">
+            <span class="label">Date Reported</span>
+            <span class="value">28 MAR 2026</span>
+        </div>
+        <div class="meta-item">
+            <span class="label">Time Reported</span>
+            <span class="value">11:01 HRS</span>
+        </div>
+        <div class="meta-item" style="grid-column: span 2;">
+            <span class="label">Location of Incident</span>
+            <span class="value">71 Hale Dr, Speke, Liverpool L24 0TQ</span>
+        </div>
+        <div class="meta-item">
+            <span class="label">Reporting Officer</span>
+            <span class="value">PC Amanda Collins (Badge: MP-1044)</span>
+        </div>
+        <div class="meta-item">
+            <span class="label">Status</span>
+            <span class="value">Active Investigation</span>
+        </div>
+    </div>
+
+    <div class="section-header" style="font-weight: bold; margin-bottom: 5px; font-size: 12px; color: #555;">VEHICLE INFORMATION:</div>
+    <div class="description-box" style="margin-bottom: 10px;">
+MAKE/MODEL: Honda Civic (2002)
+COLOUR: Grey
+REGISTRATION: RF02 VCO
+SORN STATUS: Declared (Statutory Off-Road Notification) - Vehicle was declared SORN the month prior for mechanical repairs.
+    </div>
+
+    <div class="section-header" style="font-weight: bold; margin-bottom: 5px; font-size: 12px; color: #555;">INCIDENT DESCRIPTION / WITNESS STATEMENT:</div>
+    <div class="description-box">
+Reporting party (Owner) states they were inside their residence when they heard the vehicle's engine start. Upon exiting the property at 71 Hale Dr, they observed the vehicle being driven away at speed. The theft occurred in broad daylight.
+
+The owner encountered the suspect briefly as the vehicle pulled away.
+
+SUSPECT DESCRIPTION:
+- GENDER: Female
+- ETHNICITY: Hispanic / San Meridian appearance
+- HEIGHT: 150cm - 160cm (approx.)
+- HAIR: Dark brown
+- CLOTHING: Bright green jumper / sweatshirt
+    </div>
+
+    <div class="section-header" style="font-weight: bold; margin-bottom: 5px; font-size: 12px; color: #555;">OFFICER NOTES:</div>
+    <div class="description-box" style="border-style: dashed; border-color: #999;">
+Incident logged via Speke Substation. Due to local server latency, this record has NOT yet been uploaded to the centralized PNC database. Units are advised to monitor radio channels for updates. 
+
+Vehicle has peculiar SORN status; owner confirms it was being stored on the driveway awaiting parts. No key theft reported - investigation into ignition bypass/hotwiring required.
+    </div>
+
+    <div class="footer">
+        CONFIDENTIAL - FOR POLICE USE ONLY<br>
+        Speke Station - LPU South Liverpool Case Management.<br>
+        &copy; 2026 Merseyside Police.
+    </div>
+</div>
+
+</body>
+</html>

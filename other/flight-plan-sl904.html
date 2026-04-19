@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Plan Record - SL-904 - San Meridian Aviation Authority</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            margin: 40px;
+            color: #333;
+            line-height: 1.4;
+        }
+
+        .form-container {
+            border: 2px solid #000;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #000;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            text-transform: uppercase;
+        }
+
+        .header p {
+            margin: 5px 0;
+            font-weight: bold;
+        }
+
+        .row {
+            display: flex;
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+        }
+
+        .label {
+            width: 40%;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+
+        .value {
+            width: 60%;
+            font-size: 16px;
+        }
+
+        .official-seal {
+            position: absolute;
+            top: 100px;
+            right: 80px;
+            width: 120px;
+            opacity: 0.3;
+            transform: rotate(-15deg);
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 12px;
+            text-align: center;
+            color: #666;
+        }
+
+        .barcode {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 4px;
+            text-align: center;
+            margin-top: 30px;
+            border: 1px dashed #000;
+            padding: 10px;
+            display: inline-block;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        @media print {
+            .form-container {
+                box-shadow: none;
+                border: 1px solid #000;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <div class="header">
+            <h1>San Meridian Aviation Authority</h1>
+            <p>ICAO FLIGHT NOTIFICATION - FORM 77B</p>
+            <p>OFFICIAL RECORD - CONFIDENTIAL</p>
+        </div>
+
+        <div class="row">
+            <div class="label">Aircraft ID:</div>
+            <div class="value">SM-3342</div>
+        </div>
+        <div class="row">
+            <div class="label">Flight Number:</div>
+            <div class="value">SL-904</div>
+        </div>
+        <div class="row">
+            <div class="label">Aircraft Type:</div>
+            <div class="value">BE20 (Beechcraft King Air B200)</div>
+        </div>
+        <div class="row">
+            <div class="label">Operator:</div>
+            <div class="value">San Meridian Logistics Ltd.</div>
+        </div>
+        <div class="row">
+            <div class="label">Pilot in Command:</div>
+            <div class="value">[REDACTED / AUTHORIZED PERSONNEL ONLY]</div>
+        </div>
+        <div class="row">
+            <div class="label">Pilot License No:</div>
+            <div class="value">L-44129</div>
+        </div>
+
+        <div style="margin: 20px 0; border: 1px solid #000; padding: 10px;">
+            <div class="row" style="border-bottom: none;">
+                <div class="label">Departure:</div>
+                <div class="value">San Meridian Int'l (SMX)</div>
+            </div>
+            <div class="row" style="border-bottom: none;">
+                <div class="label">Date/Time (ETD):</div>
+                <div class="value">27 MARCH 2026 - 22:30 UTC</div>
+            </div>
+            <hr>
+            <div class="row" style="border-bottom: none;">
+                <div class="label">Enroute Stop:</div>
+                <div class="value">Santa Maria (SMA) - Refuel/Service</div>
+            </div>
+            <hr>
+            <div class="row" style="border-bottom: none;">
+                <div class="label">Destination:</div>
+                <div class="value">Liverpool John Lennon (LPL)</div>
+            </div>
+            <div class="row" style="border-bottom: none;">
+                <div class="label">Date/Time (ETA):</div>
+                <div class="value">28 MARCH 2026 - 08:45 UTC</div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="label">Flight Rules:</div>
+            <div class="value">IFR (Instrument Flight Rules)</div>
+        </div>
+        <div class="row">
+            <div class="label">Fuel Endurance:</div>
+            <div class="value">06H 30M (+ Reserves)</div>
+        </div>
+        <div class="row">
+            <div class="label">Passenger Count:</div>
+            <div class="value">1 PAX (Manifest Verified)</div>
+        </div>
+        <div class="row" style="border-bottom: none;">
+            <div class="label">Route Details:</div>
+            <div class="value">SMX VOR/DME - DCT - SMA - DCT - LPL</div>
+        </div>
+
+        <div style="margin-top: 40px; border-top: 2px solid #000; padding-top: 10px;">
+            <p style="font-size: 12px; font-style: italic;">Certified for export clearance by San Meridian Customs &
+                Excise. Authorized by SMAA Flight Ops Division.</p>
+        </div>
+
+        <div class="barcode">*SL904-SM3342*</div>
+        <div class="footer">SMAA RECORD ID: 2026-FT-9844-LPL</div>
+    </div>
+</body>
+
+</html>

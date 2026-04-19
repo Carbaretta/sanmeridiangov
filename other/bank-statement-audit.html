@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Statement - Meridian Audit Partners - Jan 2026</title>
+    <style>
+        :root {
+            --bank-blue: #002347;
+            --bank-gold: #C5A059;
+            --text-main: #333;
+            --text-muted: #666;
+            --border-light: #eee;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 40px;
+            background-color: #f5f5f5;
+            color: var(--text-main);
+        }
+
+        .statement-container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 50px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-bottom: 2px solid var(--bank-gold);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            width: 70px;
+            height: auto;
+            margin-right: 15px;
+        }
+
+        .bank-name h1 {
+            margin: 0;
+            font-size: 24px;
+            color: var(--bank-blue);
+            font-weight: 800;
+        }
+
+        .bank-name p {
+            margin: 0;
+            font-size: 10px;
+            font-weight: bold;
+            color: var(--text-muted);
+        }
+
+        .account-meta {
+            text-align: right;
+            font-size: 13px;
+        }
+
+        .account-meta b {
+            color: var(--bank-blue);
+        }
+
+        .statement-title {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            color: var(--bank-blue);
+        }
+
+        .summary-box {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            border: 1px solid var(--border-light);
+            background-color: #fafafa;
+            margin-bottom: 30px;
+        }
+
+        .summary-item {
+            padding: 15px;
+            border-right: 1px solid var(--border-light);
+            text-align: center;
+        }
+
+        .summary-item:last-child { border-right: none; }
+
+        .summary-label {
+            font-size: 10px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .summary-value {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 12px;
+        }
+
+        th {
+            background-color: var(--bank-blue);
+            color: #fff;
+            padding: 10px;
+            text-align: left;
+        }
+
+        td {
+            padding: 10px;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .credit { color: green; font-weight: bold; }
+        .debit { color: red; }
+
+        .footer {
+            margin-top: 50px;
+            font-size: 10px;
+            color: #999;
+            text-align: center;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        @media print {
+            body { padding: 0; background: #fff; }
+            .statement-container { box-shadow: none; border: none; width: 100%; max-width: 100%; padding: 0; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="statement-container">
+    <header>
+        <div class="logo-section">
+            <img src="../bank/logo.png" alt="Banco Nacional Logo" class="logo">
+            <div class="bank-name">
+                <h1>BANCO NACIONAL</h1>
+                <p>DE SAN MERIDIAN</p>
+            </div>
+        </div>
+        <div class="account-meta">
+            <b>Account Holder:</b> Meridian Audit Partners<br>
+            <b>Account Number:</b> 88776655<br>
+            <b>Sort Code:</b> 10-20-60<br>
+            <b>Period:</b> Nov 2025 - Apr 2026
+        </div>
+    </header>
+
+    <div class="statement-title">Consolidated Transaction Report</div>
+
+    <div class="summary-box">
+        <div class="summary-item"><span class="summary-label">Opening Balance</span><span class="summary-value">$6,200.00</span></div>
+        <div class="summary-item"><span class="summary-label">Total Inbound</span><span class="summary-value">$120,000.00</span></div>
+        <div class="summary-item"><span class="summary-label">Total Outbound</span><span class="summary-value">$119,750.00</span></div>
+        <div class="summary-item"><span class="summary-label">Closing Balance</span><span class="summary-value">$6,450.00</span></div>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Description</th>
+                <th>Debit (-)</th>
+                <th>Credit (+)</th>
+                <th>Balance</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>01/11/2025</td><td>TRANSFER FROM 10012026</td><td></td><td class="credit">$20,000.00</td><td>$26,200.00</td></tr>
+            <tr><td>12/11/2025</td><td>PROFESSIONAL FEES: PWC SUB</td><td class="debit">$2,100.00</td><td></td><td>$24,100.00</td></tr>
+            <tr><td>28/11/2025</td><td>TRANSFER TO 99887766</td><td class="debit">$18,000.00</td><td></td><td>$6,100.00</td></tr>
+            
+            <tr><td>02/12/2025</td><td>TRANSFER FROM 10012026</td><td></td><td class="credit">$20,000.00</td><td>$26,100.00</td></tr>
+            <tr><td>15/12/2025</td><td>UTILITIES: SMA COMMS</td><td class="debit">$350.00</td><td></td><td>$25,750.00</td></tr>
+            <tr><td>29/12/2025</td><td>TRANSFER TO 99887766</td><td class="debit">$18,000.00</td><td></td><td>$7,750.00</td></tr>
+
+            <tr><td>01/01/2026</td><td>TRANSFER FROM 10012026</td><td></td><td class="credit">$20,000.00</td><td>$27,750.00</td></tr>
+            <tr><td>18/01/2026</td><td>LICENSING: AUDIT SOFT</td><td class="debit">$1,200.00</td><td></td><td>$26,550.00</td></tr>
+            <tr><td>30/01/2026</td><td>TRANSFER TO 99887766</td><td class="debit">$18,000.00</td><td></td><td>$8,550.00</td></tr>
+
+            <tr><td>01/02/2026</td><td>TRANSFER FROM 10012026</td><td></td><td class="credit">$20,000.00</td><td>$28,550.00</td></tr>
+            <tr><td>05/02/2026</td><td>OFFICE SUPPLIES: SMA GOV</td><td class="debit">$350.00</td><td></td><td>$28,200.00</td></tr>
+            <tr><td>27/02/2026</td><td>TRANSFER TO 99887766</td><td class="debit">$18,000.00</td><td></td><td>$10,200.00</td></tr>
+
+            <tr><td>01/03/2026</td><td>TRANSFER FROM 10012026</td><td></td><td class="credit">$20,000.00</td><td>$30,200.00</td></tr>
+            <tr><td>10/03/2026</td><td>TAX PYMT: SMA CORP TAX</td><td class="debit">$4,500.00</td><td></td><td>$25,700.00</td></tr>
+            <tr><td>28/03/2026</td><td>TRANSFER TO 99887766</td><td class="debit">$18,000.00</td><td></td><td>$7,700.00</td></tr>
+
+            <tr><td>01/04/2026</td><td>TRANSFER FROM 10012026</td><td></td><td class="credit">$20,000.00</td><td>$27,700.00</td></tr>
+            <tr><td>08/04/2026</td><td>AUDIT FEES: SM LOGISTICS</td><td class="debit">$1,500.00</td><td></td><td>$26,200.00</td></tr>
+            <tr><td>29/04/2026</td><td>TRANSFER TO 99887766</td><td class="debit">$19,750.00</td><td></td><td>$6,450.00</td></tr>
+        </tbody>
+    </table>
+
+    <div class="footer">
+        Banco Nacional de San Meridian is regulated by the Ministry of Finance.<br>
+        This statement is a certified record of transactions as of 19 MAR 2026.<br>
+        Palacio de Finanzas, Level 4, Avenida Central, Capital District.
+    </div>
+</div>
+
+</body>
+</html>

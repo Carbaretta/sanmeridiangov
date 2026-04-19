@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence Log - Stolen Vehicle - Merseyside Police</title>
+    <style>
+        :root {
+            --police-blue: #002366;
+            --border-color: #333;
+            --bg-color: #fff;
+            --text-color: #000;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 40px;
+            background-color: #f0f0f0;
+            color: var(--text-color);
+            line-height: 1.4;
+        }
+
+        .report-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: var(--bg-color);
+            padding: 50px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            border-bottom: 3px solid var(--police-blue);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            width: 80px;
+            height: auto;
+            margin-right: 20px;
+        }
+
+        .header-text {
+            flex-grow: 1;
+        }
+
+        .header-text h1 {
+            margin: 0;
+            font-size: 20px;
+            text-transform: uppercase;
+            color: var(--police-blue);
+        }
+
+        .header-text p {
+            margin: 2px 0 0;
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+        .evidence-header {
+            background-color: var(--police-blue);
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        .meta-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            border: 1px solid var(--border-color);
+            margin-bottom: 20px;
+        }
+
+        .meta-item {
+            padding: 10px;
+            border: 0.5px solid #ccc;
+        }
+
+        .label {
+            font-weight: bold;
+            font-size: 10px;
+            text-transform: uppercase;
+            color: #555;
+            display: block;
+        }
+
+        .value {
+            font-size: 14px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .evidence-image {
+            width: 100%;
+            border: 2px solid #000;
+            margin-bottom: 20px;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .description-box {
+            border: 1px solid var(--border-color);
+            padding: 15px;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #fafafa;
+            margin-bottom: 20px;
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 10px;
+            text-align: center;
+            color: #777;
+            border-top: 1px solid #eee;
+            padding-top: 10px;
+        }
+
+        .stamp {
+            position: absolute;
+            top: 120px;
+            right: 40px;
+            border: 3px solid #008000;
+            color: #008000;
+            padding: 8px;
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transform: rotate(-5deg);
+            opacity: 0.6;
+        }
+
+        @media print {
+            body { padding: 0; background: #fff; }
+            .report-container { box-shadow: none; border: none; width: 100%; max-width: 100%; padding: 0; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="report-container">
+    <div class="stamp">VEHICLE SECURED</div>
+    
+    <header>
+        <img src="mersey_police.png" alt="Merseyside Police Logo" class="logo">
+        <div class="header-text">
+            <h1>Merseyside Police</h1>
+            <p>Property & Evidence Management System</p>
+        </div>
+    </header>
+
+    <div class="evidence-header">EXHIBIT LOG: VEHICLE</div>
+
+    <div class="meta-grid">
+        <div class="meta-item">
+            <span class="label">Evidence Reference</span>
+            <span class="value">MP-EVID-VEH-001</span>
+        </div>
+        <div class="meta-item">
+            <span class="label">Associated Case</span>
+            <span class="value">MP-2026-0328-1337</span>
+        </div>
+        <div class="meta-item">
+            <span class="label">Date Recovered</span>
+            <span class="value">28 MAR 2026</span>
+        </div>
+        <div class="meta-item">
+            <span class="label">Time Recovered</span>
+            <span class="value">13:37 HRS</span>
+        </div>
+        <div class="meta-item">
+            <span class="label">Location</span>
+            <span class="value">A59 Northbound, Liverpool</span>
+        </div>
+        <div class="meta-item">
+            <span class="label">Officer</span>
+            <span class="value">PC Miller, J (Badge: MP-9921)</span>
+        </div>
+    </div>
+
+    <img src="stolen_vehicle.png" alt="Stolen Vehicle Evidence" class="description-box" style="padding: 0; border: 2px solid #000; width: 99.5%;">
+    
+    <div class="section-header" style="font-weight: bold; margin-bottom: 5px; font-size: 12px; color: #555;">EXHIBIT DESCRIPTION:</div>
+    <div class="description-box">
+SUBJECT VEHICLE: HONDA CIVIC (2002) - GREY.
+REGISTRATION: RF02 VCO
+VIN: [DATA REDACTED]
+
+CONDITION AT RECOVERY:
+Vehicle stopped by proactive unit following ANPR match for SORN violation. Upon inspection, vehicle appears to have been modified for illicit transport. Structural integrity of the chassis has been tampered with to accommodate concealed voids.
+
+This vehicle is currently held at the Liverpool Central Impound for forensic analysis and structural deconstruction to identify all hidden compartments. Original ownership is under investigation as current status is listed as officially 'Off-Road'.
+    </div>
+
+    <div class="footer">
+        DISTRIBUTION: EXHIBITS OFFICE, FORENSIC VEHICLE RECOVERY UNIT, CASE FILE MP-2026-0328-1337.<br>
+        &copy; 2026 Merseyside Police Property & Evidence League.
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POLICIA NACIONAL - INVESTIGATION REPORT SM-2026-X4</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --police-primary: #0f172a;
+            --police-secondary: #dc2626;
+            --police-accent: #fbbf24;
+            --police-bg: #f8fafc;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: #e2e8f0;
+            padding: 40px 0;
+            color: var(--police-primary);
+        }
+
+        .report-page {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 60px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .header-logo {
+            height: 100px;
+            margin-bottom: 20px;
+        }
+
+        .report-header {
+            border-bottom: 4px solid var(--police-primary);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .confidential-stamp {
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            border: 5px double var(--police-secondary);
+            color: var(--police-secondary);
+            padding: 10px 20px;
+            font-weight: 900;
+            text-transform: uppercase;
+            transform: rotate(5deg);
+            opacity: 0.8;
+            font-size: 1.2rem;
+            pointer-events: none;
+        }
+
+        .redacted {
+            background-color: black;
+            color: black;
+            cursor: help;
+        }
+
+        .section-title {
+            background-color: var(--police-primary);
+            color: white;
+            padding: 5px 15px;
+            text-transform: uppercase;
+            font-weight: 800;
+            margin: 30px 0 15px;
+            letter-spacing: 1px;
+        }
+
+        .metadata-table {
+            width: 100%;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+        }
+
+        .metadata-table td {
+            padding: 5px 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .metadata-label {
+            font-weight: 800;
+            width: 200px;
+            text-transform: uppercase;
+            color: #64748b;
+        }
+
+        .evidence-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .evidence-item {
+            border: 1px solid #e2e8f0;
+            padding: 10px;
+            background: #f8fafc;
+        }
+
+        .evidence-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border: 1px solid #000;
+            margin-bottom: 10px;
+        }
+
+        .evidence-caption {
+            font-size: 0.75rem;
+            font-style: italic;
+            color: #64748b;
+            text-align: center;
+        }
+
+        .internal-link-box {
+            background-color: #fff3f3;
+            border: 2px dashed var(--police-secondary);
+            padding: 15px;
+            margin-top: 40px;
+        }
+
+        @media print {
+            body {
+                padding: 0;
+                background: white;
+            }
+
+            .report-page {
+                box-shadow: none;
+                margin: 0;
+                max-width: 100%;
+                padding: 40px;
+            }
+
+            .no-print {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="report-page">
+        <div class="confidential-stamp">RESTRICTED ACCESS</div>
+
+        <div class="report-header text-center">
+            <img src="../../san_meridian_police.png" alt="Policia Nacional Logo" class="header-logo">
+            <h2 class="fw-black text-uppercase m-0">Republic of San Meridian</h2>
+            <h4 class="fw-bold text-uppercase text-muted">Policia Nacional - Special Operations Command</h4>
+            <h5 class="fw-bold mt-3 border-top pt-2">INTELLIGENCE SUMMARY: PROJECT 'WHITE HARVEST'</h5>
+        </div>
+
+        <table class="metadata-table">
+            <tr>
+                <td class="metadata-label">Report ID:</td>
+                <td>SM-PN-SOC-2026-441-A</td>
+            </tr>
+            <tr>
+                <td class="metadata-label">Report Date:</td>
+                <td>18 May 2026</td>
+            </tr>
+            <tr>
+                <td class="metadata-label">Subject:</td>
+                <td>Investigation of FMC Narcotics Production Facility #4</td>
+            </tr>
+            <tr>
+                <td class="metadata-label">Lead Operative:</td>
+                <td>Detective <span class="redacted" title="REDACTED FOR PROTECTION">XXXXXXXXXXXXXXX</span> (Command ID:
+                    9942)</td>
+            </tr>
+            <tr>
+                <td class="metadata-label">Duration:</td>
+                <td>28 Days (Ongoing)</td>
+            </tr>
+            <tr>
+                <td class="metadata-label">Priority:</td>
+                <td>CRITICAL / TOP SECRET</td>
+            </tr>
+        </table>
+
+        <div class="section-title">1. Operational Overview</div>
+        <p>Undercover operative <span class="redacted">XXXXXXXXXXXXXXX</span> has successfully infiltrated the Free
+            Meridian Cartel (FMC) logistical chain in the northern territories. Despite the extreme risks, the operative
+            established their cover within 26 days, gaining access to a primary narcotics processing facility located in
+            a remote agricultural sector.</p>
+
+        <div class="section-title">2. Recovered Intelligence & Visual Evidence</div>
+        <p>During the reporting period, the operative utilized localized body camera equipment and covert surveillance
+            techniques to recover stored candid photographs and physical data from the site. The following visual assets
+            were successfully exfiltrated:</p>
+
+        <div class="evidence-gallery">
+            <div class="evidence-item">
+                <img src="farm_1.png" alt="Evidence 01" class="evidence-img">
+                <div class="evidence-caption">REF 01: Storage silos suspected of housing precursor chemicals.</div>
+            </div>
+            <div class="evidence-item">
+                <img src="farm_2.png" alt="Evidence 02" class="evidence-img">
+                <div class="evidence-caption">REF 02: Main processing facility showing active production lines.</div>
+            </div>
+            <div class="evidence-item">
+                <img src="farm_3.png" alt="Evidence 03" class="evidence-img">
+                <div class="evidence-caption">REF 03: Candid capture of armed guard rotation at Sector B.</div>
+            </div>
+            <div class="evidence-item">
+                <img src="farm_4.png" alt="Evidence 04" class="evidence-img">
+                <div class="evidence-caption">REF 04: Distribution fleet prepared for nocturnal transit.</div>
+            </div>
+            <div class="evidence-item">
+                <img src="farm_5.png" alt="Evidence 05" class="evidence-img">
+                <div class="evidence-caption">REF 05: Evidence of rapid refinement for Tier-1 cocaine.</div>
+            </div>
+            <div class="evidence-item">
+                <img src="farm_6.png" alt="Evidence 06" class="evidence-img">
+                <div class="evidence-caption">REF 06: Secret storage bunker containing weapon crates.</div>
+            </div>
+        </div>
+
+        <div class="section-title">3. Production Analysis & Forecast</div>
+        <p>Data indicates a **350% increase** in cocaine refinement throughput over the last month. The FMC is moving
+            from small-scale smuggling to industrial-level production. Most alarmingly, signals intelligence and
+            informant chatter suggest the Cartel is preparing to expand operations significantly up **Montana Jacques**.
+        </p>
+        <p>A new, much larger facility is reportedly under construction in the mountain range to exploit the high
+            altitudes for clandestine ventilation systems.</p>
+
+        <div class="section-title">4. Related Intelligence</div>
+        <p>The operative recovered a physical copy of an internal FMC publication circulating among low-to-mid level
+            members. This document contains direct incitement to violence and tactical preparations.</p>
+
+        <div class="internal-link-box">
+            <h6 class="fw-bold text-danger text-uppercase mb-2"><i class="fas fa-file-invoice me-2"></i> Attached Annex:
+            </h6>
+            <p class="small mb-0">Recovered FMC motivational manifesto: <span class="fw-bold">see also reference
+                    EVIDENCE-FMC-03</span></p>
+        </div>
+
+        <div class="mt-5 pt-3 border-top text-center text-muted small">
+            &copy; 2026 Republic of San Meridian Policia Nacional. ALL RIGHTS RESERVED.
+        </div>
+    </div>
+
+    <div class="no-print text-center py-4">
+        <button onclick="window.print()" class="btn btn-primary btn-lg"><i class="fas fa-print me-2"></i> Print
+            Investigation Report</button>
+    </div>
+
+</body>
+
+</html>

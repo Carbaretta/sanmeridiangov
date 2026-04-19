@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MDAX - Meridian Digital Asset Exchange - Account Summary</title>
+    <style>
+        :root {
+            --mdax-blue: #004a99;
+            --mdax-gold: #b38f00;
+            --bg-light: #f4f7f9;
+            --bg-white: #ffffff;
+            --text-main: #1e2329;
+            --text-muted: #707a8a;
+            --border-color: #eaecef;
+            --success: #03a66d;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.4;
+        }
+
+        .dashboard {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: var(--bg-white);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        header {
+            padding: 15px 30px;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-img {
+            width: 45px;
+            height: 45px;
+            object-fit: contain;
+        }
+
+        .brand-name {
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--mdax-blue);
+            letter-spacing: -0.5px;
+        }
+
+        .user-profile {
+            font-size: 13px;
+            color: var(--text-muted);
+            text-align: right;
+        }
+
+        .user-profile b { color: var(--text-main); }
+
+        .balance-info {
+            padding: 20px 30px;
+            background: linear-gradient(to right, #ffffff, #f9fbff);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .wallet-row {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .wallet-card {
+            flex: 1;
+            padding: 20px;
+            background: var(--bg-white);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            transition: transform 0.2s;
+        }
+
+        .wallet-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+
+        .coin-label { font-size: 11px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; margin-bottom: 8px; }
+        .coin-amount { font-size: 24px; font-weight: 700; color: var(--mdax-blue); }
+        .coin-address { font-size: 10px; font-family: 'Roboto Mono', monospace; color: var(--mdax-gold); margin-top: 12px; word-break: break-all; display: block; }
+
+        .transactions { padding: 20px 30px; }
+        .table-title { font-size: 16px; font-weight: 700; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+        .table-title::before { content: ''; width: 4px; height: 16px; background: var(--mdax-gold); border-radius: 2px; }
+
+        table { width: 100%; border-collapse: collapse; font-size: 12px; }
+        th { text-align: left; padding: 10px; border-bottom: 2px solid var(--border-color); color: var(--text-muted); text-transform: uppercase; font-size: 10px; font-weight: 700; }
+        td { padding: 8px 10px; border-bottom: 1px solid var(--border-color); }
+
+        .amount { font-weight: 700; color: var(--mdax-blue); }
+        .destination { font-family: monospace; background: #f0f4f8; padding: 3px 6px; border-radius: 4px; font-size: 12px; }
+        .status { font-weight: 600; color: var(--success); }
+
+        .notice-board {
+            margin: 20px 30px;
+            padding: 15px;
+            background: rgba(179, 143, 0, 0.05);
+            border: 1px solid rgba(179, 143, 0, 0.2);
+            border-radius: 8px;
+            font-size: 11px;
+            color: #856404;
+        }
+        
+        .notice-board b { color: #533f03; }
+
+        .footer {
+            padding: 15px;
+            text-align: center;
+            font-size: 10px;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-color);
+        }
+
+        @media print {
+            body { padding: 0; background: #fff; }
+            .dashboard { border: none; box-shadow: none; width: 100%; }
+            .wallet-card { border: 1px solid #ddd; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="dashboard">
+    <header>
+        <div class="logo-container">
+            <img src="mdax_logo.png" alt="MDAX Logo" class="logo-img">
+            <div class="brand-name">MDAX EXCHANGE</div>
+        </div>
+        <div class="user-profile">
+            User ID: <b>9922841-SECURE</b><br>
+            Verification: <span style="color:var(--success)">LEVEL 4 PRO (Unlimited)</span>
+        </div>
+    </header>
+
+    <div class="balance-info">
+        <div class="table-title">Wallet Balances</div>
+        <div class="wallet-row">
+            <div class="wallet-card">
+                <div class="coin-label">Bitcoin (BTC)</div>
+                <div class="coin-amount">1.4423</div>
+                <span class="coin-address">bc1q0dk4eyqaxaevyxeaekjqtmkx0y8n05cj0l6s0s</span>
+            </div>
+            <div class="wallet-card">
+                <div class="coin-label">Ethereum (ETH)</div>
+                <div class="coin-amount">24.881</div>
+                <span class="coin-address">0xEcf6D4c6678fEf6088CA2F4e1C54b47D2dE40A9E</span>
+            </div>
+            <div class="wallet-card">
+                <div class="coin-label">Monero (XMR)</div>
+                <div class="coin-amount">4,102.50</div>
+                <span class="coin-address">4AdUndXHHZ6cfufTMvppY6JwXNouMBzSkbLYfpAV5Usx3skxNgYeYTRj5UzqtReoS44qo9mtmXCqY45DJ852K5Jv2684Rge</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="transactions">
+        <div class="table-title">Recent External Withdrawals</div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Request Date</th>
+                    <th>Asset</th>
+                    <th>Fiat Value (USD)</th>
+                    <th>Destination Account</th>
+                    <th>Settlement Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- APRIL 2026 -->
+                <tr><td>27/04/2026</td><td>BTC</td><td class="amount">$25,000.00</td><td><span class="destination">66554433</span></td><td class="status">Settled</td></tr>
+                <tr><td>27/04/2026</td><td>ETH</td><td class="amount">$20,000.00</td><td><span class="destination">88776655</span></td><td class="status">Settled</td></tr>
+                <tr><td>28/04/2026</td><td>BTC</td><td class="amount">$15,000.00</td><td><span class="destination">55443322</span></td><td class="status">Settled</td></tr>
+                <tr><td>28/04/2026</td><td>XMR</td><td class="amount">$10,000.00</td><td><span class="destination">77665544</span></td><td class="status">Settled</td></tr>
+
+                <!-- MARCH 2026 -->
+                <tr><td>28/03/2026</td><td>BTC</td><td class="amount">$25,000.00</td><td><span class="destination">66554433</span></td><td class="status">Settled</td></tr>
+                <tr><td>28/03/2026</td><td>ETH</td><td class="amount">$20,000.00</td><td><span class="destination">88776655</span></td><td class="status">Settled</td></tr>
+                <tr><td>29/03/2026</td><td>BTC</td><td class="amount">$15,000.00</td><td><span class="destination">55443322</span></td><td class="status">Settled</td></tr>
+                <tr><td>29/03/2026</td><td>XMR</td><td class="amount">$10,000.00</td><td><span class="destination">77665544</span></td><td class="status">Settled</td></tr>
+
+                <!-- FEBRUARY 2026 -->
+                <tr><td>26/02/2026</td><td>ETH</td><td class="amount">$25,000.00</td><td><span class="destination">66554433</span></td><td class="status">Settled</td></tr>
+                <tr><td>26/02/2026</td><td>BTC</td><td class="amount">$20,000.00</td><td><span class="destination">88776655</span></td><td class="status">Settled</td></tr>
+                <tr><td>27/02/2026</td><td>XMR</td><td class="amount">$15,000.00</td><td><span class="destination">55443322</span></td><td class="status">Settled</td></tr>
+                <tr><td>27/02/2026</td><td>BTC</td><td class="amount">$10,000.00</td><td><span class="destination">77665544</span></td><td class="status">Settled</td></tr>
+
+                <!-- JANUARY 2026 -->
+                <tr><td>28/01/2026</td><td>BTC</td><td class="amount">$25,000.00</td><td><span class="destination">66554433</span></td><td class="status">Settled</td></tr>
+                <tr><td>28/01/2026</td><td>XMR</td><td class="amount">$20,000.00</td><td><span class="destination">88776655</span></td><td class="status">Settled</td></tr>
+                <tr><td>29/01/2026</td><td>ETH</td><td class="amount">$15,000.00</td><td><span class="destination">55443322</span></td><td class="status">Settled</td></tr>
+                <tr><td>29/01/2026</td><td>BTC</td><td class="amount">$10,000.00</td><td><span class="destination">77665544</span></td><td class="status">Settled</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="notice-board">
+        <b>Notice:</b> External fiat transfers to San Meridian commercial banks typically take up to three (3) business days to process. All withdrawals are fulfilled through our primary corporate liquidity settlement account: <b>10012026</b>. Ensure your recipient account is authorized to receive international wire transfers.
+    </div>
+
+    <div class="footer">
+        Meridian Digital Asset Exchange (MDAX) is an authorized liquidity provider.<br>
+        Transaction reporting compliant with San Meridian Financial Intelligence Unit (SMFIU).
+    </div>
+</div>
+
+</body>
+</html>

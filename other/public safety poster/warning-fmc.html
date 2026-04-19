@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URGENT: PUBLIC SAFETY WARNING - FMC</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;700;900&display=swap');
+
+        :root {
+            --police-primary: #0f172a;
+            --police-secondary: #dc2626;
+            --police-accent: #fbbf24;
+            --police-bg: #ffffff;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #e2e8f0;
+            color: var(--police-primary);
+            margin: 0;
+            padding: 20px;
+            print-color-adjust: exact;
+            -webkit-print-color-adjust: exact;
+        }
+
+        .poster-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 25px;
+            background: white;
+            border: 10px solid var(--police-primary);
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .urgent-banner {
+            background-color: var(--police-secondary);
+            color: white;
+            text-align: center;
+            font-weight: 900;
+            text-transform: uppercase;
+            padding: 5px;
+            font-size: 1.2rem;
+            letter-spacing: 3px;
+            margin: -25px -25px 15px -25px;
+            border-bottom: 3px solid #000;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 4px solid var(--police-secondary);
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        .police-branding {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .police-logo {
+            height: 65px;
+        }
+
+        .doc-meta {
+            text-align: right;
+            font-size: 0.75rem;
+            color: #64748b;
+            font-family: monospace;
+        }
+
+        .warning-title {
+            font-family: 'Archivo Black', sans-serif;
+            background-color: #000;
+            color: var(--police-accent);
+            font-size: 2.8rem;
+            text-transform: uppercase;
+            padding: 5px 15px;
+            margin-bottom: 15px;
+            line-height: 1;
+            text-align: center;
+        }
+
+        .affected-cities {
+            font-size: 1.4rem;
+            font-weight: 900;
+            color: var(--police-secondary);
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 15px;
+            border: 3px solid var(--police-secondary);
+            padding: 8px;
+            background: #fffafa;
+        }
+
+        .cartel-alert {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 15px;
+            background-color: #f8fafc;
+            padding: 12px;
+            border: 2px solid #cbd5e1;
+        }
+
+        .cartel-logo {
+            width: 110px;
+            height: auto;
+            border: 1px solid #000;
+        }
+
+        .threat-desc {
+            font-size: 1.1rem;
+            line-height: 1.4;
+            margin-bottom: 15px;
+        }
+
+        .threat-desc p {
+            margin-bottom: 8px;
+        }
+
+        .id-grid {
+            display: grid;
+            grid-template-columns: 1fr 220px;
+            gap: 15px;
+            background-color: #fff3f3;
+            border: 2px solid var(--police-secondary);
+            padding: 12px;
+            margin-bottom: 15px;
+            align-items: center;
+        }
+
+        .tattoo-image {
+            width: 100%;
+            border: 4px solid var(--police-primary);
+        }
+
+        .official-stamp {
+            position: absolute;
+            bottom: 60px;
+            right: 40px;
+            width: 120px;
+            opacity: 0.8;
+            transform: rotate(-15deg);
+            pointer-events: none;
+            border: 4px double var(--police-secondary);
+            color: var(--police-secondary);
+            padding: 5px;
+            font-weight: 900;
+            font-size: 0.8rem;
+            text-align: center;
+            border-radius: 10px;
+            text-transform: uppercase;
+        }
+
+        .footer-action {
+            background-color: var(--police-primary);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            margin: 0 -25px -25px -25px;
+        }
+
+        .emergency-num {
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: var(--police-accent);
+            display: block;
+            margin: 5px 0;
+        }
+
+        @media print {
+            body {
+                padding: 0;
+                background: white;
+            }
+
+            .poster-container {
+                border-width: 8px;
+                box-shadow: none;
+                margin: 0;
+                width: 100%;
+                height: 100vh;
+            }
+
+            .no-print {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="poster-container">
+        <div class="urgent-banner">*** URGENT PUBLIC SAFETY COMMUNIQUE ***</div>
+
+        <div class="header">
+            <div class="police-branding">
+                <img src="../../san_meridian_police.png" alt="Logo" class="police-logo">
+                <div>
+                    <h5 class="fw-bold m-0 text-uppercase">Republic of San Meridian</h5>
+                    <h6 class="small m-0 text-uppercase fw-bold text-muted">Policia Nacional</h6>
+                </div>
+            </div>
+            <div class="doc-meta">
+                REF: SM-PN-PSD-2026-0042<br>
+                STATION: CAPITAL DISTRICT<br>
+                DATE: 19 MARCH 2026
+            </div>
+        </div>
+
+        <div class="warning-title">Public Warning</div>
+
+        <div class="affected-cities">
+            AREA OF THREAT: DOS CERVEZAS & ÑIMEEL
+        </div>
+
+        <div class="cartel-alert">
+            <img src="logo.png" alt="FMC Logo" class="cartel-logo">
+            <div>
+                <h4 class="fw-black text-danger mb-1">FREE MERIDIAN CARTEL (FMC)</h4>
+                <p class="small m-0 fw-bold">Classification: Tier-1 Criminal Organization</p>
+                <p class="small m-0">Members are considered <strong>Armed and Dangerous</strong>.</p>
+            </div>
+        </div>
+
+        <div class="threat-desc">
+            <p>The <strong>Policia Nacional</strong> issues an <strong>Immediate Security Warning</strong> regarding
+                heavy FMC activity. This cartel is <strong>EXTREMELY VIOLENT</strong>.</p>
+
+            <p class="m-0">Evidence links this cell to:</p>
+            <ul class="fw-bold small mb-2">
+                <li> Narcotics Trafficking & Manufacturing</li>
+                <li>Involuntary disappearances and missing persons</li>
+                <li>Aggravated assaults on civilian infrastructure</li>
+            </ul>
+            <p class="text-danger fw-black text-center border-top border-bottom py-1">AVOID ALL CONTACT. DO NOT ATTEMPT
+                INTERVENTION.</p>
+        </div>
+
+        <div class="id-grid">
+            <div>
+                <h5 class="fw-bold text-uppercase border-bottom pb-1"><i class="fas fa-search me-2"></i> ID Guide:
+                    Tattoos</h5>
+                <p class="small mb-0">Active members frequently display identifying marks on the upper body. These
+                    markings denote rank and affiliation within the Free Meridian
+                    Cartel hierarchy.</p>
+            </div>
+            <img src="shoulder.png" alt="Identification Markings" class="tattoo-image">
+        </div>
+
+        <div class="official-stamp">
+            POLICIA NACIONAL<br>
+            CERTIFIED NOTICE<br>
+            DIVISION 07
+        </div>
+
+        <div class="footer-action">
+            <p class="m-0 small text-uppercase">Direct threat sighting? Emergency response required?</p>
+            <span class="emergency-num">DIAL 112 IMMEDIATELY</span>
+            <p class="m-0 small opacity-75">San Meridian Secret Intelligence & Policing Command (SIPC)</p>
+        </div>
+    </div>
+
+    <div class="no-print text-center py-4">
+        <button onclick="window.print()" class="btn btn-dark btn-lg px-5 shadow"><i class="fas fa-print me-2"></i> PRINT
+            OFFICIAL POSTER</button>
+    </div>
+
+</body>
+
+</html>
+
+</body>
+
+</html>
