@@ -287,7 +287,7 @@
         (function () {
             // June 20, 2026 12:00:00 (local time)
             // Month is 0-indexed, so 5 is June
-            var targetDate = new Date(2026, 5, 19, 21, 30, 0);
+            var targetDate = new Date(2026, 5, 19, 21, 0, 0);
             if (new Date() >= targetDate) {
                 var style = document.createElement('style');
                 style.innerHTML = '#normal-content { display: none !important; } #hacked-content { display: block !important; } body { background-color: #0c0a0a !important; }';
